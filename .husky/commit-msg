@@ -1,5 +1,8 @@
 message="$(cat $1)"
+echo "Commit message: $message"
+
 requiredPattern="^(test:|feat:|fix:|refactor:|optimise:|document:|merge:|Merge) .*$"
+
 if ! [[ $message =~ $requiredPattern ]];
 then
   echo "-"
