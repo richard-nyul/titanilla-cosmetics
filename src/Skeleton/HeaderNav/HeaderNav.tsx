@@ -1,24 +1,26 @@
 import { NavLink } from 'react-router-dom';
 import './styles.css';
+import { useEffect } from 'react';
 
 const HeaderNav = () => {
-  document.querySelectorAll('.booking').forEach((element) => {
-    const booking = element as HTMLElement;
+  useEffect(() => {
+    document.querySelectorAll('.booking').forEach((element) => {
+      const booking = element as HTMLElement;
+      booking.addEventListener('mousemove', (e: MouseEvent) => {
+        const { left, top, width, height } = booking.getBoundingClientRect();
+        const x = ((e.clientX - left) / width) * 100;
+        const y = ((e.clientY - top) / height) * 100;
 
-    booking.addEventListener('mousemove', (e: MouseEvent) => {
-      const { left, top, width, height } = booking.getBoundingClientRect();
-      const x = ((e.clientX - left) / width) * 100;
-      const y = ((e.clientY - top) / height) * 100;
+        booking.style.setProperty('--x', `${x}%`);
+        booking.style.setProperty('--y', `${y}%`);
+        booking.classList.add('glow');
+      });
 
-      booking.style.setProperty('--x', `${x}%`);
-      booking.style.setProperty('--y', `${y}%`);
-      booking.classList.add('glow');
+      booking.addEventListener('mouseleave', () => {
+        booking.classList.remove('glow');
+      });
     });
-
-    booking.addEventListener('mouseleave', () => {
-      booking.classList.remove('glow');
-    });
-  });
+  }, []);
 
   return (
     <div className="header-nav-container">
