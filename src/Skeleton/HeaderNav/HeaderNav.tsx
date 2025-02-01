@@ -1,25 +1,29 @@
 import { NavLink } from 'react-router-dom';
 import './styles.css';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 const HeaderNav = () => {
+  const bookingRef = useRef<HTMLAnchorElement | null>(null);
+
   useEffect(() => {
-    document.querySelectorAll('.booking').forEach((element) => {
-      const booking = element as HTMLElement;
-      booking.addEventListener('mousemove', (e: MouseEvent) => {
-        const { left, top, width, height } = booking.getBoundingClientRect();
-        const x = ((e.clientX - left) / width) * 100;
-        const y = ((e.clientY - top) / height) * 100;
+    const booking = bookingRef.current;
+    if (!booking) return;
 
-        booking.style.setProperty('--x', `${x}%`);
-        booking.style.setProperty('--y', `${y}%`);
-        booking.classList.add('glow');
-      });
+    const handleMouseMove = (e: MouseEvent) => {
+      const { left, top, width, height } = booking.getBoundingClientRect();
+      const x = ((e.clientX - left) / width) * 100;
+      const y = ((e.clientY - top) / height) * 100;
 
-      booking.addEventListener('mouseleave', () => {
-        booking.classList.remove('glow');
-      });
-    });
+      booking.style.setProperty('--x', `${x}%`);
+      booking.style.setProperty('--y', `${y}%`);
+      booking.classList.add('glow');
+    };
+
+    booking.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      booking.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
 
   return (
@@ -36,7 +40,11 @@ const HeaderNav = () => {
       <NavLink className="header-nav-elem basic" to="/contact">
         Kapcsolat
       </NavLink>
-      <NavLink className="header-nav-elem booking" to="/booking">
+      <NavLink
+        ref={bookingRef}
+        className="header-nav-elem booking"
+        to="/booking"
+      >
         Időpontfoglalás
       </NavLink>
     </div>
