@@ -1,0 +1,49 @@
+@import url('@variables');
+
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.review-card {
+background-color: var( --main-background-color);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40vh;
+}
+
+.review-time {
+  color: #969696;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-text-color);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.review-header {
+  display: flex;
+  gap: 20px;
+}
+
+.review-name-time {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-avatar {
+  height: 55px;
+}
+
+.star {
+  padding-right: 5px;
+  height: 1.5rem;
+}

@@ -1,4 +1,12 @@
 :root {
-    --main-text-color: #1E1E1E;
-    --main-linear-gradient: linear-gradient(to right, #cc9c48, #dbb763, #ead77c, #ead16d)
-  }
+  --main-text-color: #1e1e1e;
+  --main-linear-gradient: linear-gradient(
+    to right,
+    #cc9c48,
+    #dbb763,
+    #ead77c,
+    #ead16d
+  );
+  --main-background-color: #fff;
+  --secondary-color: #d9d9d9;
+}

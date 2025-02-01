@@ -1,3 +1,5 @@
+@import url("@variables");
+
 .header {
     display: flex;
     flex-direction: row;
@@ -7,9 +9,20 @@
     top: 0;
     z-index: 4;
     height: 91px;
-    border-bottom: 1px solid #D9D9D9;
+    border-bottom: 1px solid var(--secondary-color);
+    background-color: var(--main-background-color);
   }
-  
+
+  /* .header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--main-linear-gradient);
+}
+   */
   .logo-container {
     padding-top: 10px;
   }

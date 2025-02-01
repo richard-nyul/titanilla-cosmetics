@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Amsterdam Four';
+  src: url('/fonts/AmsterdamFour.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Serif Display';
+  src: url('/fonts/NotoSerifDisplayExtraCondensed.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair Display SC';
+  src: url('/fonts/PlayfairDisplaySC.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.background-logo-container {
+  background-image: url('@assets/images/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  width: 100vw;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  overflow: hidden;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+h1 {
+  font-family: 'Noto Serif Display', sans-serif;
+  color: #ccbe9e;
+  font-size: 9em;
+  z-index: 1;
+  position: absolute;
+}
+
+h2 {
+  font-family: 'Amsterdam Four', sans-serif;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  z-index: 2;
+  position: relative;
+  padding: 0.4em 0.8em 0.8em 0.8em;
+}
+
+.title-container {
+  position: absolute;
+  z-index: 3;
+  bottom: -0.4em;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+h3 {
+  font-family: 'Playfair Display SC', sans-serif;
+  font-size: 0.5em;
+  padding: 0 0.3em;
+}
+
+.left-line,
+.right-line {
+  height: 1px;
+  background-color: black;
+  width: 100%;
+}
