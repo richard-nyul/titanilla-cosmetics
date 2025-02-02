@@ -1,3 +1,5 @@
+@import url('@variables');
+
 @font-face {
   font-family: 'Amsterdam Four';
   src: url('/fonts/AmsterdamFour.ttf') format('truetype');
@@ -42,7 +44,7 @@
 
 h1 {
   font-family: 'Noto Serif Display', sans-serif;
-  color: #ccbe9e;
+  color: var(--secondary-background-color);
   font-size: 9em;
   z-index: 1;
   position: absolute;
