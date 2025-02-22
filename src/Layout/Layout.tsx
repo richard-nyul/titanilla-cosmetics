@@ -4,6 +4,7 @@ import Footer from '../Skeleton/Footer/Footer';
 import LandingPage from '../sections/LandingPage/LandingPage';
 import Pricelist from '../sections/LandingPage/PriceList/Pricelist';
 import Contact from '../sections/Contact/Contact';
+import BackgroundLogo from '../sections/LandingPage/BackgroundLogo/BackgroundLogo';
 
 const Layout = () => {
   // const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
@@ -12,6 +13,7 @@ const Layout = () => {
   return (
     <div className="layout-container">
       <Header />
+      <BackgroundLogo />
       <div className="content-container">
         <LandingPage />
         <Pricelist />

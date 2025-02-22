@@ -1,13 +1,22 @@
 @import url('@variables');
 
 .layout-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 
-.content-container {
+  .content-container {
     flex: 1;
     background-color: var(--main-background-color);
+  }
+
+  .content-container > * {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .content-container > :nth-child(even) {
+    background: rgba(196, 194, 190, 0.2);
+  }
 }

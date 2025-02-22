@@ -3,6 +3,20 @@ export const reviews = {
   result: {
     reviews: [
       {
+        author_name: 'Mónika Mátyás',
+        author_url:
+          'https://www.google.com/maps/contrib/106528677070037602819/reviews',
+        language: 'hu',
+        original_language: 'hu',
+        profile_photo_url:
+          'https://lh3.googleusercontent.com/a/ACg8ocI8EAJw94jDbs4NzwsHZAolrcBfPysaDO_qaNMAvY__bG--rg=s128-c0x00000000-cc-rp-mo',
+        rating: 5,
+        relative_time_description: 'az elmúlt héten',
+        text: 'A szalon hangulata megnyugtató, a kezelések pedig fantasztikusak. Mindig bizalommal jövök ide, mert tudom, hogy a legjobb kezekben vagyok!',
+        time: 1739701255,
+        translated: false,
+      },
+      {
         author_name: 'B. Black',
         author_url:
           'https://www.google.com/maps/contrib/113811660934492449391/reviews',
@@ -17,17 +31,17 @@ export const reviews = {
         translated: false,
       },
       {
-        author_name: 'Mónika Mátyás',
+        author_name: 'Kerekes Vivien',
         author_url:
-          'https://www.google.com/maps/contrib/106528677070037602819/reviews',
+          'https://www.google.com/maps/contrib/106791201160474381265/reviews',
         language: 'hu',
         original_language: 'hu',
         profile_photo_url:
-          'https://lh3.googleusercontent.com/a/ACg8ocI8EAJw94jDbs4NzwsHZAolrcBfPysaDO_qaNMAvY__bG--rg=s128-c0x00000000-cc-rp-mo',
+          'https://lh3.googleusercontent.com/a-/ALV-UjWOsIP-QdfYOZXfrp_DpHOgFblfB9DxJj7Md-G49J_XPER8VkDB=s128-c0x00000000-cc-rp-mo',
         rating: 5,
         relative_time_description: 'az elmúlt héten',
-        text: 'A szalon hangulata megnyugtató, a kezelések pedig fantasztikusak. Mindig bizalommal jövök ide, mert tudom, hogy a legjobb kezekben vagyok!',
-        time: 1739701255,
+        text: 'Minőségi termékekkel dolgozik, és mindig naprakész a legújabb kozmetikai trendekben. A bőröm imádja a kezeléseit.',
+        time: 1740245746,
         translated: false,
       },
     ],
