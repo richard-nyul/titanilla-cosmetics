@@ -35,14 +35,14 @@
   overflow: hidden;
 }
 
-.logo-container {
+.background-logo-container .logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
-h1 {
+.background-logo-container h1 {
   font-family: 'Noto Serif Display', sans-serif;
   color: var(--secondary-background-color);
   font-size: 9em;
@@ -50,7 +50,7 @@ h1 {
   position: absolute;
 }
 
-h2 {
+.background-logo-container h2 {
   font-family: 'Amsterdam Four', sans-serif;
   border-top: 1px solid black;
   border-left: 1px solid black;
@@ -60,7 +60,7 @@ h2 {
   padding: 0.4em 0.8em 0.8em 0.8em;
 }
 
-.title-container {
+.background-logo-container .title-container {
   position: absolute;
   z-index: 3;
   bottom: -0.4em;
@@ -69,14 +69,14 @@ h2 {
   width: 100%;
 }
 
-h3 {
+.background-logo-container h3 {
   font-family: 'Playfair Display SC', sans-serif;
   font-size: 0.5em;
   padding: 0 0.3em;
 }
 
-.left-line,
-.right-line {
+.background-logo-container .left-line,
+.background-logo-container .right-line {
   height: 1px;
   background-color: black;
   width: 100%;
