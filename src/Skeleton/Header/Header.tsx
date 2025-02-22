@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import './styles.css';
+import './styles.scss';
 import logo from '@assets/images/logo.png';
 import HeaderNav from '../HeaderNav/HeaderNav';
 import HeaderMobileNav from '../HeaderMobileNav/HeaderMobileNav';

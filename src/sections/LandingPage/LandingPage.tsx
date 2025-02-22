@@ -1,6 +1,6 @@
 import BackgroundLogo from './BackgroundLogo/BackgroundLogo';
 import Reviews from './Reviews/Reviews';
-import './styles.css';
+import './styles.scss';
 
 const LandingPage = () => {
   return (

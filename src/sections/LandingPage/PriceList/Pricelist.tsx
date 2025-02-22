@@ -1,4 +1,4 @@
-import './styles.css';
+import './styles.scss';
 import { priceList } from '../../../constants/priceList';
 
 const Pricelist = () => {

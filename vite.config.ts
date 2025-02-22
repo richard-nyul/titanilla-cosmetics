@@ -11,7 +11,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@assets': resolve(__dirname, 'src/assets'),
-      '@variables': resolve(__dirname, 'src/variables.css'),
+      '@variables': resolve(__dirname, 'src/variables.scss'),
     },
   },
 });

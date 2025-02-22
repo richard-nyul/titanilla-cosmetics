@@ -1,6 +1,6 @@
 import { useEffect, useRef, useCallback } from 'react';
 import { NavLink } from 'react-router-dom';
-import './styles.css';
+import './styles.scss';
 
 function HeaderMobileNav() {
   const sidenavRef = useRef<HTMLDivElement>(null);

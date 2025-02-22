@@ -1,4 +1,4 @@
-import './styles.css';
+import './styles.scss';
 import facebook from '@assets/images/facebook.svg';
 import instagram from '@assets/images/instagram.svg';
 import phone from '@assets/images/phone.svg';

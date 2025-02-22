@@ -1,17 +1,16 @@
-@import url("@variables");
+@import url('@variables');
 
 .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 4;
-    height: 91px;
-    border-bottom: 1px solid var(--secondary-color);
-    background-color: var(--main-background-color);
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  height: 91px;
+  border-bottom: 1px solid var(--secondary-color);
+  background-color: var(--main-background-color);
 
   /* .header::after {
     content: "";
@@ -30,12 +29,10 @@
   .logo {
     height: 91px;
   }
-  
+
   .navigation-container {
     flex-grow: 1;
     display: flex;
     justify-content: center;
   }
-
-  
-  
+}

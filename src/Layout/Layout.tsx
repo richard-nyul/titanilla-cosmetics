@@ -1,4 +1,4 @@
-import './styles.css';
+import './styles.scss';
 import Header from '../Skeleton/Header/Header';
 import Footer from '../Skeleton/Footer/Footer';
 import LandingPage from '../sections/LandingPage/LandingPage';
