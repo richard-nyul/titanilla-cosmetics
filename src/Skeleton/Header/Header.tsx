@@ -14,7 +14,7 @@ const Header = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  if (windowWidth > 1270) {
+  if (windowWidth > 900) {
     return (
       <header className="header">
         <div className="logo-container">
