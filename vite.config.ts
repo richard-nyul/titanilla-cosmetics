@@ -12,6 +12,7 @@ export default defineConfig({
     alias: {
       '@assets': resolve(__dirname, 'src/assets'),
       '@variables': resolve(__dirname, 'src/variables.scss'),
+      '@hooks': resolve(__dirname, 'src/hooks'),
     },
   },
 });

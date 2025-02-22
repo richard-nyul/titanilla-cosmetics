@@ -1,30 +1,9 @@
 import { NavLink } from 'react-router-dom';
 import './styles.scss';
-import { useEffect, useRef } from 'react';
+import useGlow from '../../hooks/useGlow';
 
 const HeaderNav = () => {
-  const bookingRef = useRef<HTMLAnchorElement | null>(null);
-
-  useEffect(() => {
-    const booking = bookingRef.current;
-    if (!booking) return;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      const { left, top, width, height } = booking.getBoundingClientRect();
-      const x = ((e.clientX - left) / width) * 100;
-      const y = ((e.clientY - top) / height) * 100;
-
-      booking.style.setProperty('--x', `${x}%`);
-      booking.style.setProperty('--y', `${y}%`);
-      booking.classList.add('glow');
-    };
-
-    booking.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      booking.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
+  const bookingRef = useGlow<HTMLAnchorElement>();
 
   return (
     <div className="header-nav-container">
@@ -42,7 +21,7 @@ const HeaderNav = () => {
       </NavLink>
       <NavLink
         ref={bookingRef}
-        className="header-nav-elem booking"
+        className="header-nav-elem action"
         to="/booking"
       >
         Időpontfoglalás

@@ -26,39 +26,6 @@
     text-decoration: none;
   }
 
-  .booking {
-    position: relative;
-    padding-left: 16px;
-    padding-right: 16px;
-    background: var(--main-linear-gradient);
-    margin-left: 20px;
-    border-radius: 8px;
-    box-shadow:
-      0 2px 2px rgba(0, 0, 0, 0.2),
-      0 1px 3px rgba(0, 0, 0, 0.08);
-  }
-
-  .booking::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    pointer-events: none;
-    transition: opacity 0.2s ease;
-    opacity: 0;
-  }
-
-  .booking.glow::after {
-    opacity: 1;
-    background: radial-gradient(
-      circle at var(--x, 50%) var(--y, 50%),
-      rgba(255, 255, 255, 0.3) 10%,
-      transparent 50%
-    );
-  }
 }
 .header-nav-elem {
   font-size: 16px;

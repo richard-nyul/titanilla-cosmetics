@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import './styles.scss';
+import useGlow from '../../hooks/useGlow';
 
 const Contact = () => {
+  const buttonRef = useGlow<HTMLButtonElement>();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -58,7 +60,9 @@ const Contact = () => {
               onChange={handleChange}
               required
             ></textarea>
-            <button type="submit">Send</button>
+            <button ref={buttonRef} className="action" type="submit">
+              Send
+            </button>
           </form>
         </div>
       </div>
