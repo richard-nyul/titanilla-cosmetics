@@ -8,7 +8,7 @@ import {
 const Pricelist = () => {
   return (
     <div className="pricelist-container">
-      <h1 className="pricelist-title">Árlista</h1>
+      <h1 className="title">Árlista</h1>
       <div className="pricelist">
         {Object.entries(priceList).map(([category, services], idx) => (
           <div className="category" key={idx}>
