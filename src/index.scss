@@ -1,4 +1,32 @@
-@import url('./variables.scss');
+@import url('@variables');
+
+@font-face {
+  font-family: 'Amsterdam Four';
+  src: url('/fonts/AmsterdamFour.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Serif Display';
+  src: url('/fonts/NotoSerifDisplayExtraCondensed.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair Display SC';
+  src: url('/fonts/PlayfairDisplaySC.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Great Vibes';
+  src: url('/fonts/GreatVibes.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   margin: 0;

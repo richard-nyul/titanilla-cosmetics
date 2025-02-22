@@ -1,0 +1,54 @@
+@import url('@variables');
+
+.pricelist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .pricelist {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem
+  }
+
+  .pricelist-title {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    font-family: 'Great Vibes', sans-serif;
+  }
+  .category {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  .service-description {
+    font-size: 0.9rem;
+  }
+
+  .secondary-text {
+    color: var(--secondary-text-color);
+  }
+
+  .service-container {
+    margin-bottom: 1rem;
+  }
+
+  .service-name-price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .price-list-message {
+    margin-top: 3rem;
+    text-align: center;
+  }
+}

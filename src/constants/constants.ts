@@ -1,4 +1,14 @@
-export const priceList = {
+type PriceItem = {
+  title: string;
+  price: number;
+  description?: string;
+};
+
+type PriceList = {
+  [key: string]: PriceItem[];
+};
+
+export const priceList: PriceList = {
   'Bielenda arckezelések': [
     {
       title: 'Waterfalls of Gold – Kolloid Arany',
@@ -18,6 +28,24 @@ export const priceList = {
         'Intenzív kettős hatású mélyhidratáló hatású arckezelés dehidratált, oxigénhiányos bőrre.',
     },
   ],
+  'KRX Aesthetics arckezelések': [
+    {
+      title: 'Bioherb 50 Peeling',
+      price: 15000,
+      description: 'Természetes, savak nélküli bőrmegújító arckezelés.',
+    },
+    {
+      title: 'Carboxy Terápia',
+      price: 15000,
+      description:
+        'Non-invazív szén-dioxidos arckezelés magas hatóanyag tartalommal és extra növényi kivonatokkal.',
+    },
+    {
+      title: 'Thread-Fill kollagénszálas kezelés',
+      price: 13000,
+      description: 'Felszívódó kollagénszálas arckezelés a feszesebb bőrért.',
+    },
+  ],
   'Egyéb arckezelések': [
     {
       title: 'Relaxáló arcmasszázs',
@@ -35,24 +63,6 @@ export const priceList = {
       price: 8500,
       description:
         'Fiatal bőr számára kifejlesztett tisztító és regeneráló arckezelés.',
-    },
-  ],
-  'KRX Aesthetics arckezelések': [
-    {
-      title: 'Bioherb 50 Peeling',
-      price: 15000,
-      description: 'Természetes, savak nélküli bőrmegújító arckezelés.',
-    },
-    {
-      title: 'Carboxy Terápia',
-      price: 15000,
-      description:
-        'Non-invazív szén-dioxidos arckezelés magas hatóanyag tartalommal és extra növényi kivonatokkal.',
-    },
-    {
-      title: 'Thread-Fill kollagénszálas kezelés',
-      price: 13000,
-      description: 'Felszívódó kollagénszálas arckezelés a feszesebb bőrért.',
     },
   ],
   'Festések, szemöldök styling': [
@@ -81,7 +91,7 @@ export const priceList = {
       price: 9700,
     },
     {
-      title: 'Szemhéj festés',
+      title: 'Szempilla festés',
       price: 2700,
     },
   ],
@@ -93,32 +103,26 @@ export const priceList = {
     {
       title: 'Hónalj',
       price: 2500,
-      description: 'Hónalj gyantázása a sima és tartós eredményért.',
     },
     {
       title: 'Kar könyékig',
       price: 2800,
-      description: 'Alkar szőrtelenítése gyantával.',
     },
     {
       title: 'Teljes kar',
       price: 3800,
-      description: 'Teljes kar gyantázása puha és sima bőrért.',
     },
     {
       title: 'Láb térdig',
       price: 3700,
-      description: 'Láb szőrtelenítése térdig gyantával.',
     },
     {
       title: 'Teljes láb',
       price: 5800,
-      description: 'Teljes láb gyantázása a hosszantartó simaságért.',
     },
   ],
-  Kapcsolat: {
-    Telefonszám: '+3670/779-2509',
-    Érvényesség: '2024.08.01-től',
-    Megjegyzés: 'Az árváltozás jogát fenntartjuk.',
-  },
 };
+
+export const priceListValidityMessage =
+  'Az árlista 2024. 08. 01-étől érvényes.';
+export const priceListLegalNote = 'Az árváltozás jogát fenntartom.';
