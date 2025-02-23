@@ -5,6 +5,7 @@ import LandingPage from '../sections/LandingPage/LandingPage';
 import Pricelist from '../sections/LandingPage/PriceList/Pricelist';
 import Contact from '../sections/Contact/Contact';
 import BackgroundLogo from '../sections/LandingPage/BackgroundLogo/BackgroundLogo';
+import Introducer from '../sections/Introducer/Introducer';
 
 const Layout = () => {
   // const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
@@ -15,6 +16,7 @@ const Layout = () => {
       <Header />
       <BackgroundLogo />
       <div className="content-container">
+        <Introducer />
         <LandingPage />
         <Pricelist />
         <Contact />

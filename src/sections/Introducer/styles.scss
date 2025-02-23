@@ -1,0 +1,24 @@
+.introducer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 0 !important;
+
+  .introducer-message {
+    max-width: 500px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-family: 'Great Vibes';
+    font-size: 2.5rem;
+  }
+
+  .portrait {
+    height: 250px;
+    border-radius: 10px;
+    margin: 0 50px;
+  }
+}
