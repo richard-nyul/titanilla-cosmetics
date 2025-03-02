@@ -8,6 +8,16 @@ type PriceList = {
   [key: string]: PriceItem[];
 };
 
+type Services = {
+  name: string;
+  image: string;
+  details: string;
+  treatment: string;
+  pros: string[];
+  cons: string[];
+  result: string;
+};
+
 export const priceList: PriceList = {
   'Bielenda arckezelések': [
     {
@@ -122,6 +132,78 @@ export const priceList: PriceList = {
     },
   ],
 };
+
+export const services: Services[] = [
+  {
+    name: 'Carboxy terápia',
+    image: 'carboxy_therapy.png',
+    details:
+      'A Carboxy Therapy egy innovatív, nem-invazív bőrfiatalító eljárás, amely szén-dioxid segítségével serkenti a bőr oxigénellátását és kollagéntermelését.',
+    treatment:
+      'A kezelés során a bőrbe juttatott CO₂ fokozza a vérkeringést, csökkenti a ráncokat, feszesíti a bőrt és javítja annak textúráját. Ideális választás fakó, fáradt bőrre, pigmentfoltok halványítására és a bőr rugalmasságának növelésére.',
+    pros: [
+      'Fakó, fáradt bőr élénkítése',
+      'Ráncok és finom vonalak halványítása',
+      'Pórusok összehúzása',
+      'Hidratáció fokozása',
+    ],
+    cons: [
+      'Nyílt sebek, aktív fertőzések a bőrön',
+      'Súlyos akné, rosacea akut fázisban',
+      'Terhesség és szoptatás',
+      'Friss lézeres vagy hámlasztó kezelés utáni időszak',
+    ],
+    result:
+      'A Carboxy kezelés már az első alkalommal látványos eredményt hoz, de kúraszerű alkalmazása segíti a bőr tartós megújulását és egészségesebb kinézetét.',
+  },
+  {
+    name: 'Mikrotűs mezoterápia',
+    image: 'meso_booster.png',
+    details:
+      'A mikrotűs mezoterápia egy innovatív, frakcionált eljárás, amely hatékonyan serkenti a bőr regenerációs folyamatait, elősegíti a kollagéntermelést és fokozza a hatóanyagok felszívódását.',
+    treatment:
+      'A kezelés során apró mikrotűk segítségével sérülések keletkeznek a bőrön, amelyek beindítják a bőr öngyógyító mechanizmusait, ezáltal feszesebb, rugalmasabb és fiatalosabb bőrt eredményezve. \nA kezelést KRX Aesthetics szérumokkal végzem, amelyek magas koncentrációban tartalmaznak bőrazonos hatóanyagokat, vitaminokat és peptideket, hogy a legjobb eredményt érjük el bőrtípusodnak megfelelően.',
+    pros: [
+      'Ráncok, finom vonalak csökkentése',
+      'Hegek halványítása',
+      'Pigmentfoltok kezelése',
+      'Pórusok méretének csökkentése',
+      'Bőr feszesítése, tónusának javítása',
+    ],
+    cons: [
+      'Terhesség, szoptatás',
+      'Aktív bőrbetegségek (pl. ekcéma, psoriasis, herpesz)',
+      'Nyílt sebek, friss hegek a kezelendő területen',
+      'Autoimmun betegségek',
+      'Vérhígító gyógyszerek szedése',
+      'Keloid hajlam',
+    ],
+    result:
+      'A kezelést követően enyhe bőrpír és duzzanat előfordulhat, amely 1-2 napon belül elmúlik. A legjobb eredmények érdekében kúraszerű alkalmazás javasolt, amelyet személyre szabottan állítok össze.',
+  },
+  {
+    name: 'Thread-Fill kollagénszál kezelés',
+    image: 'thread_fill.png',
+    details:
+      'A Thread-Fill kollagénszál kezelés egy fájdalommentes, nem invazív eljárás, amely serkenti a bőr saját kollagéntermelését és feszesítő hatást biztosít.',
+    treatment:
+      'A kezelés során biokompatibilis kollagénszálakat juttatok a bőr felszínére, amelyek fokozatosan felszívódva javítják a bőr rugalmasságát, csökkentik a ráncokat és kontúrosabbá teszik az arckontúrt.',
+    pros: [
+      'Bőrmegereszkedés csökkentése',
+      'Ráncok és finom vonalak kezelése',
+      'Arckontúr feszesítése',
+      'A bőr tónusának és rugalmasságának javítása',
+    ],
+    cons: [
+      'Aktív fertőzések, gyulladás a kezelendő területen',
+      'Terhesség és szoptatás',
+      'Autoimmun betegségek',
+      'Keloid hajlam',
+    ],
+    result:
+      'A kezelés azonnali feszesítő hatást biztosít, amely a következő hetekben tovább fokozódik a kollagéntermelés beindulásával.',
+  },
+];
 
 export const priceListValidityMessage =
   'Az árlista 2024. 08. 01-étől érvényes.';

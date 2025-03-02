@@ -6,20 +6,27 @@ import Pricelist from '../sections/LandingPage/PriceList/Pricelist';
 import Contact from '../sections/Contact/Contact';
 import BackgroundLogo from '../sections/LandingPage/BackgroundLogo/BackgroundLogo';
 import Introducer from '../sections/Introducer/Introducer';
+import Services from '../sections/Services/Services';
 
 const Layout = () => {
-  // const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
-  // const PLACE_ID = import.meta.env.VITE_PLACE_ID;
-
   return (
     <div className="layout-container">
       <Header />
       <BackgroundLogo />
       <div className="content-container">
-        <Introducer />
-        <LandingPage />
-        <Pricelist />
-        <Contact />
+        <div id="home">
+          <Introducer />
+          <LandingPage />
+        </div>
+        <div id="pricing">
+          <Pricelist />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
+        <div id="services">
+          <Services />
+        </div>
       </div>
       <Footer />
     </div>
