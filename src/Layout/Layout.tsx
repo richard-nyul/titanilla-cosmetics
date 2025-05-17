@@ -18,14 +18,14 @@ const Layout = () => {
           <Introducer />
           <LandingPage />
         </div>
+        <div id="services">
+          <Services />
+        </div>
         <div id="pricing">
           <Pricelist />
         </div>
         <div id="contact">
           <Contact />
-        </div>
-        <div id="services">
-          <Services />
         </div>
       </div>
       <Footer />

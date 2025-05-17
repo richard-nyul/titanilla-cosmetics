@@ -1,13 +1,79 @@
-@import url('@variables');
+@import url("@variables");
+
+.reviews-wrapper {
+  position: relative;
+}
 
 .reviews-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  position: relative;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary-color) transparent;
 }
 
+/* Webkit-based browsers (Chrome, Safari, Edge) */
+.reviews-container::-webkit-scrollbar {
+  height: 4px;
+  background: transparent;
+  border-radius: 5px;
+}
+
+.reviews-container::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 5px;
+  transition: height 0.3s ease-in-out;
+}
+
+.reviews-container:hover::-webkit-scrollbar-thumb {
+  height: 10px;
+  background: var(--main-text-color);
+}
+
+.reviews-container::-webkit-scrollbar-thumb:active {
+  height: 12px;
+  background: var(--main-text-color);
+}
+
+/* Fading Effect */
+.reviews-wrapper::before,
+.reviews-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 30px;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reviews-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--main-background-color) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.reviews-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--main-background-color) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Hide fade effect when at edges */
+.hide-left.reviews-container + .reviews-wrapper::before {
+  opacity: 0;
+}
+
+.hide-right.reviews-container + .reviews-wrapper::after {
+  opacity: 0;
+}
+
+/* Styling the reviews */
 .review-card {
-background-color: var( --main-background-color);
+  background-color: var(--main-background-color);
   border-radius: 5px;
   padding: 20px;
   margin: 20px;
@@ -15,7 +81,7 @@ background-color: var( --main-background-color);
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 40vh;
+  min-width: 300px;
 }
 
 .review-time {
