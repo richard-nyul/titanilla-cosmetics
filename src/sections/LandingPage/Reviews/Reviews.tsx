@@ -1,6 +1,11 @@
-import './styles.css';
+import './styles.scss';
 import { reviews } from '../../../constants/reviewExample';
 import star from '@assets/images/star.svg';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination, Autoplay } from 'swiper/modules';
 
 const Reviews = () => {
   const filteredReviews = reviews.result.reviews
@@ -9,36 +14,35 @@ const Reviews = () => {
 
   return (
     <section className="reviews-container">
-      {filteredReviews.map((review, index) => (
-        <div key={index} className="review-card">
-          <div className="review-header">
-            <img
-              src={review.profile_photo_url}
-              alt={review.author_name}
-              className="review-avatar"
-            />
-            <div className="review-name-time">
-              <a
-                href={review.author_url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {review.author_name}
-              </a>
-              <span className="review-time">
-                {review.relative_time_description}
-              </span>
+      <h2>Rólam mondtátok</h2>
+      <Swiper
+        className="swiper-container"
+        modules={[Pagination, Autoplay]}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        loop
+        spaceBetween={16}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+      >
+        {filteredReviews.map((review, index) => (
+          <SwiperSlide className="swiper-slide" key={index}>
+            <div className="review-card">
+              <div className="review-header">
+                <h3>{review.author_name}</h3>
+              </div>
+              <p className="review-rating">
+                {Array.from({ length: review.rating }).map((_, idx) => (
+                  <img key={idx} src={star} alt="star" className="star" />
+                ))}
+              </p>
+              <p className="review-text">{review.text}</p>
             </div>
-          </div>
-          <p></p>
-          <p className="review-rating">
-            {Array.from({ length: review.rating }).map((_, idx) => (
-              <img key={idx} src={star} alt="star" className="star" />
-            ))}
-          </p>
-          <p className="review-text">{review.text}</p>
-        </div>
-      ))}
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 };
