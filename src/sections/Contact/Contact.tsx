@@ -29,21 +29,26 @@ const Contact = () => {
       <div className="contact-body">
         <div className="contact-info">
           <a className="contact-link" href={`tel:${mobileNumber}`}>
-            <img src={phone} alt="phone" className="icon" />
+            <img loading="lazy" src={phone} alt="phone" className="icon" />
             <p>{mobileNumber}</p>
           </a>
           <a
             className="contact-link"
             href="mailto:info@titanillakozmetikus.com"
           >
-            <img src={email} alt="email" className="icon" />
+            <img loading="lazy" src={email} alt="email" className="icon" />
             <p>info@titanillakozmetikus.com</p>
           </a>
           <a
             className="contact-link"
             href="https://www.google.com/maps/place/Titanilla+kozmetikus/@47.387074,19.2303997,17z/data=!3m1!4b1!4m6!3m5!1s0x4741eb277ae6228d:0x8b281cc402beeff5!8m2!3d47.3870704!4d19.2329746!16s%2Fg%2F11wxl3fjnj?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D"
           >
-            <img src={location} alt="location" className="icon" />
+            <img
+              loading="lazy"
+              src={location}
+              alt="location"
+              className="icon"
+            />
             <p>Gyál, Deák Ferenc u. 82, 2360</p>
           </a>
         </div>

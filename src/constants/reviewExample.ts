@@ -26,7 +26,7 @@ export const reviews = {
           'https://lh3.googleusercontent.com/a-/ALV-UjWA99Hv5shdRAZhZuuDpbG4bIgfBk2ECIxu4It9HhuBd-THlb_d=s128-c0x00000000-cc-rp-mo',
         rating: 5,
         relative_time_description: 'egy hónapja',
-        text: 'Nagyon kedves, ügyes, megbízható, pontos. Követi az újdonságokat. A bőrnek legmegfelelőbb kezelést javasolja. Minőségi termékekkel dolgozik. A hely barátságos,csendes,családias.',
+        text: 'Nagyon kedves, ügyes, megbízható, pontos. Követi az újdonságokat. A bőrnek legmegfelelőbb kezelést javasolja. Minőségi termékekkel dolgozik. A hely barátságos, csendes, családias.',
         time: 1736243059,
         translated: false,
       },

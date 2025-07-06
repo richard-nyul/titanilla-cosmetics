@@ -19,7 +19,7 @@ const Header = () => {
       <header className="header">
         <div className="logo-container">
           <NavLink className="mobile-header-nav-elem" to="/">
-            <img src={logo} alt="Logo" className="logo" />
+            <img loading="lazy" src={logo} alt="Logo" className="logo" />
           </NavLink>
         </div>
         <div className="navigation-container">
@@ -35,7 +35,7 @@ const Header = () => {
         </div>
         <div className="logo-container">
           <NavLink className="mobile-header-nav-elem" to="/">
-            <img src={logo} alt="Logo" className="logo" />
+            <img loading="lazy" src={logo} alt="Logo" className="logo" />
           </NavLink>
         </div>
       </header>

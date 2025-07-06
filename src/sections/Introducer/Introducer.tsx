@@ -15,7 +15,12 @@ const Introducer = () => {
           ajánlom figyelmedbe széles körű szépségszolgáltatásaim.
         </p>
       </div>
-      <img src={portrait} alt="Pakulár Titanilla" className="portrait" />
+      <img
+        loading="lazy"
+        src={portrait}
+        alt="Pakulár Titanilla"
+        className="portrait"
+      />
     </div>
   );
 };

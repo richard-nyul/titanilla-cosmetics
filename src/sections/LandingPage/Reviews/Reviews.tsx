@@ -35,7 +35,13 @@ const Reviews = () => {
               </div>
               <p className="review-rating">
                 {Array.from({ length: review.rating }).map((_, idx) => (
-                  <img key={idx} src={star} alt="star" className="star" />
+                  <img
+                    loading="lazy"
+                    key={idx}
+                    src={star}
+                    alt="star"
+                    className="star"
+                  />
                 ))}
               </p>
               <p className="review-text">{review.text}</p>

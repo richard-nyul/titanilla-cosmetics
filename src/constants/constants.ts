@@ -203,6 +203,27 @@ export const services: Services[] = [
     result:
       'A kezelés azonnali feszesítő hatást biztosít, amely a következő hetekben tovább fokozódik a kollagéntermelés beindulásával.',
   },
+  {
+    name: 'Bioherb 50 mikrotűs peeling',
+    image: 'bioherb_50',
+    details:
+      'A Bioherb 50 mikrotűs peeling egy természetes növényi összetevőkön alapuló mélyhámlasztó kezelés, amely stimulálja a bőr regenerációs folyamatait anélkül, hogy mikrosérüléseket okozna.',
+    treatment:
+      'A kezelés során bioherb mikrotűs peeling elősegíti a bőr megújulását, csökkenti a pigmentfoltokat és finomítja a bőr textúráját.',
+    pros: [
+      'Pigmentfoltok halványítása',
+      'Pattanások, aknés hegek kezelése',
+      'Egyenetlen bőrfelszín és tág pórusok csökkentése',
+      'Finom ráncok kezelése',
+    ],
+    cons: [
+      'Nyílt sebek a kezelendő területen',
+      'Friss lézeres vagy savas hámlasztás utáni időszak',
+      'Autoimmun betegségek',
+    ],
+    result:
+      'A kezelés után enyhe bőrpír, hámlás előfordulhat, amely néhány napon belül elmúlik, és a bőr simább, frissebb és egyenletesebb lesz. A tartós eredmény érdekében kúraszerű alkalmazás javasolt. Akár nyáron is alkalmazható.',
+  },
 ];
 
 export const priceListValidityMessage =

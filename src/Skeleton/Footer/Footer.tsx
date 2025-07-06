@@ -9,16 +9,21 @@ const Footer = () => {
     <footer className="footer-container">
       <div className="icon-container">
         <a href="https://facebook.com">
-          <img src={facebook} alt="facebook" className="icon" />
+          <img loading="lazy" src={facebook} alt="facebook" className="icon" />
         </a>
         <a href="https://instagram.com">
-          <img src={instagram} alt="instagram" className="icon" />
+          <img
+            loading="lazy"
+            src={instagram}
+            alt="instagram"
+            className="icon"
+          />
         </a>
         <a href="https://tiktok.com">
-          <img src={tiktok} alt="tiktok" className="icon" />
+          <img loading="lazy" src={tiktok} alt="tiktok" className="icon" />
         </a>
         <a className="phone-num" href={`tel:${+3612345678}`}>
-          <img src={phone} alt="phone" />
+          <img loading="lazy" src={phone} alt="phone" />
         </a>
       </div>
       <p className="footer-text">
