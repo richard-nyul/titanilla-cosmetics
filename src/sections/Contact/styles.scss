@@ -106,12 +106,23 @@
 }
 
 @media (max-width: 768px) {
-  .contact-container,
-  .contact-body {
-    flex-direction: column;
-    align-items: center;
-  }
-  .contact-body {
-    gap: 0 !important;
+  .contact-container {
+    .contact-body {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+    .contact-body {
+      gap: 0 !important;
+    }
+    .iframe-container {
+      width: 110%;
+    }
+    .contact-form {
+      padding: 0 20px !important;
+    }
+    .title {
+      margin: 0;
+    }
   }
 }

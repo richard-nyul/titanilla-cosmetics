@@ -30,13 +30,13 @@ const Header = () => {
   } else {
     return (
       <header className="header">
-        <div className="mobile-navigation-container">
-          <HeaderMobileNav />
-        </div>
         <div className="logo-container">
           <NavLink className="mobile-header-nav-elem" to="/">
             <img loading="lazy" src={logo} alt="Logo" className="logo" />
           </NavLink>
+        </div>
+        <div className="mobile-navigation-container">
+          <HeaderMobileNav />
         </div>
       </header>
     );
