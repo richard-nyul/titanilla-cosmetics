@@ -19,3 +19,11 @@
     background: var(--darker-background-color);
   }
 }
+
+@media (max-width: 768px) {
+  .layout-container {
+    .content-container > * {
+      padding: 20px;
+    }
+  }
+}
