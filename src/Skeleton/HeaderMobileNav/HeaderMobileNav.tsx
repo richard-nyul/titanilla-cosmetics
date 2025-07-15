@@ -11,11 +11,17 @@ function HeaderMobileNav() {
     if (sidenavRef.current) {
       sidenavRef.current.classList.remove('show-sidenav');
     }
-    setTimeout(() => {
-      if (overlayRef.current) {
-        overlayRef.current.style.display = 'none';
-      }
-    }, 200);
+
+    if (overlayRef.current) {
+      const overlay = overlayRef.current;
+
+      overlay.style.transition = 'background-color 200ms ease';
+      overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
+
+      setTimeout(() => {
+        overlay.style.display = 'none';
+      }, 200);
+    }
   }, []);
 
   function openNav() {
@@ -26,6 +32,10 @@ function HeaderMobileNav() {
     }, 0);
     if (overlayRef.current) {
       overlayRef.current.style.display = 'block';
+      overlayRef.current.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+      overlayRef.current.style.transition = 'background-color 200ms ease';
+      void overlayRef.current.offsetWidth;
+      overlayRef.current.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
     }
   }
 
