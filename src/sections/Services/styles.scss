@@ -98,11 +98,16 @@
 
       &:nth-child(even) {
         flex-direction: column;
+        background-color: var(--darker-background-color);
       }
 
       .information-container {
         order: 2;
         width: 100%;
+      }
+
+      .link {
+        justify-content: flex-end;
       }
 
       img {

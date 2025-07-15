@@ -22,3 +22,22 @@
     margin: 0 50px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .introducer-container {
+    padding: 0 0 60px 0 !important;
+
+    .portrait {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin: 0;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+  
+}
