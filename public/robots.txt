@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://titanillakozmetikus.hu/sitemap.xml

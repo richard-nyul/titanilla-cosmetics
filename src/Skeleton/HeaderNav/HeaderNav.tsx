@@ -1,20 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import './styles.scss';
 import useGlow from '../../hooks/useGlow';
+import { handleScroll } from '../../utils/handleScroll';
 
 const HeaderNav = () => {
   const bookingRef = useGlow<HTMLAnchorElement>();
-
-  const handleScroll = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-    sectionId: string
-  ) => {
-    e.preventDefault();
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <div className="header-nav-container">

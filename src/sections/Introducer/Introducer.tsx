@@ -1,5 +1,6 @@
 import './styles.scss';
 import portrait from '@assets/images/portrait.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Introducer = () => {
   return (
@@ -15,11 +16,13 @@ const Introducer = () => {
           ajánlom figyelmedbe széles körű szépségszolgáltatásaim.
         </p>
       </div>
-      <img
-        loading="lazy"
-        src={portrait}
+      <LazyLoadImage
         alt="Pakulár Titanilla"
-        className="portrait"
+        src={portrait}
+        effect="blur"
+        width="300px"
+        height="300px"
+        style={{ objectFit: 'cover' }}
       />
     </div>
   );

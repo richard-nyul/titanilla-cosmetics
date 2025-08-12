@@ -1,12 +1,10 @@
 import './styles.scss';
 import Header from '../Skeleton/Header/Header';
 import Footer from '../Skeleton/Footer/Footer';
-import LandingPage from '../sections/LandingPage/LandingPage';
-import Pricelist from '../sections/LandingPage/PriceList/Pricelist';
-import Contact from '../sections/Contact/Contact';
 import BackgroundLogo from '../sections/LandingPage/BackgroundLogo/BackgroundLogo';
-import Introducer from '../sections/Introducer/Introducer';
-import Services from '../sections/Services/Services';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from '../HomePage/HomePage';
+import ServiceDetails from '../sections/ServiceDetails/ServiceDetails';
 
 const Layout = () => {
   return (
@@ -14,19 +12,10 @@ const Layout = () => {
       <Header />
       <BackgroundLogo />
       <div className="content-container">
-        <div id="home">
-          <Introducer />
-          <LandingPage />
-        </div>
-        <div id="services">
-          <Services />
-        </div>
-        <div id="pricing">
-          <Pricelist />
-        </div>
-        <div id="contact">
-          <Contact />
-        </div>
+        <Routes>
+          <Route path="*" element={<HomePage />} />
+          <Route path="/services/:name" element={<ServiceDetails />} />
+        </Routes>
       </div>
       <Footer />
     </div>

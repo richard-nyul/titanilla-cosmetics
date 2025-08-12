@@ -2,32 +2,35 @@
 
 @font-face {
   font-family: 'Amsterdam Four';
-  src: url('/fonts/AmsterdamFour.ttf') format('truetype');
+  src: url('/fonts/AmsterdamFour.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Noto Serif Display';
-  src: url('/fonts/NotoSerifDisplayExtraCondensed.ttf') format('truetype');
+  src: url('/fonts/NotoSerifDisplayExtraCondensed.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Playfair Display SC';
-  src: url('/fonts/PlayfairDisplaySC.ttf') format('truetype');
+  src: url('/fonts/PlayfairDisplaySC.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Great Vibes';
-  src: url('/fonts/GreatVibes.ttf') format('truetype');
+  src: url('/fonts/GreatVibes.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
-
 * {
   margin: 0;
   padding: 0;

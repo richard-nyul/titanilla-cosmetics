@@ -1,0 +1,111 @@
+@import url('@variables');
+
+.service-detail-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 2rem;
+
+  .tabs-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    border-bottom: 2px solid #ccc;
+    position: relative;
+
+    .tab-item {
+      cursor: pointer;
+      padding: 0.8rem 1.2rem;
+      user-select: none;
+      font-weight: 600;
+      color: #666;
+      transition: color 0.3s ease;
+
+      &:hover,
+      &.active {
+        color: var(--main-linear-gradient);
+      }
+
+      &:focus {
+        outline: none;
+        text-decoration: underline;
+      }
+    }
+
+    .tab-line {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      height: 3px;
+      background: var(--main-linear-gradient);
+      transition: transform 0.3s ease;
+      width: 100%; // will be overridden inline for correct width per tab
+    }
+  }
+
+  .service-detail-content-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+
+  img {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 50px;
+  }
+
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  h3 {
+    margin-top: 1.5rem;
+  }
+
+  ul {
+    padding-left: 1.5rem;
+    list-style: disc;
+  }
+
+  a {
+    font-size: 1.2em;
+    background: var(--main-linear-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    text-decoration: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100%;
+      background: var(--main-linear-gradient);
+      transition: transform 0.3s ease;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .service-detail-content-container {
+      flex-direction: column;
+    }
+
+    img {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import './styles.scss';
 import { services } from '../../constants/constants';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   return (
@@ -14,7 +15,9 @@ const Services = () => {
               <p>{service.treatment}</p>
             </div>
             <div className="link">
-              <a href="#">További információk</a>
+              <Link to={`/services/${encodeURIComponent(service.name)}`}>
+                További információk
+              </Link>
             </div>
           </div>
           <img
