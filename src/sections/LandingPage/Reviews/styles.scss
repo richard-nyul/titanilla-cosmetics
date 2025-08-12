@@ -2,22 +2,25 @@
 
 .reviews-container {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: auto;
 
   h2 {
     text-align: center;
-    color: #333;
-    font-size: 2.5rem;
-    font-family: 'Great Vibes';
+    color: var(--main-text-color);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 40px;
   }
 
   .review-card {
-    margin: 40px 10px;
-    padding: 40px;
+    margin: 20px 15px 40px 15px;
+    padding: 40px 30px;
     background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    line-height: 1.5;
   }
 
   .review-header {
@@ -28,12 +31,12 @@
 
   .review-header h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: #333;
   }
 
   .review-rating .star {
-    width: 16px;
+    width: 20px;
     aspect-ratio: 1;
   }
 
@@ -70,4 +73,5 @@
       }
     }
   }
+
 }

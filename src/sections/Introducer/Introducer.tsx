@@ -17,6 +17,7 @@ const Introducer = () => {
         </p>
       </div>
       <LazyLoadImage
+        className="portrait"
         alt="Pakulár Titanilla"
         src={portrait}
         effect="blur"

@@ -3,40 +3,63 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
-  padding: 60px 0 !important;
+  gap: 60px;
+  padding: 80px 20px;
+
+  max-width: 1200px;
+  margin: 0 auto;
 
   .introducer-message {
-    max-width: 500px;
+    max-width: 600px;
+    flex: 1 1 400px;
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    line-height: 1.6;
+    color: var(--main-text-color);
   }
 
   h2 {
-    margin-bottom: 20px;
-    font-family: 'Great Vibes', 'Segoe Script', 'Segoe UI', 'Roboto', cursive,
-      sans-serif;
-    font-size: 2.5rem;
+    margin-bottom: 24px;
+    font-family: 'Great Vibes', 'Segoe Script', cursive, sans-serif;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    color: var(--main-text-color);
   }
 
   .portrait {
-    height: 250px;
-    border-radius: 10px;
-    margin: 0 50px;
+    flex: 0 0 320px;
+    width: 320px;
+    height: 320px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
   }
 }
 
 @media screen and (max-width: 768px) {
   .introducer-container {
-    padding: 0 0 60px 0 !important;
+    padding: 40px 15px;
+    gap: 40px;
+
+    .introducer-message {
+      max-width: 100%;
+      flex: 1 1 100%;
+      padding: 0 15px;
+      font-size: 1rem;
+    }
+
+    h2 {
+      font-size: 2.25rem;
+      margin-bottom: 16px;
+    }
 
     .portrait {
+      flex: 1 1 100%;
       width: 100%;
       max-width: 300px;
       height: auto;
-      margin: 0;
-    }
-    .introducer-message {
-      padding: 0 20px;
-      margin-top: 20px;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: none;
     }
   }
 }
