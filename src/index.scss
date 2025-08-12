@@ -107,3 +107,9 @@ a {
     transparent 50%
   );
 }
+
+@media (min-width: 768px) {
+  :root {
+    font-size: large;
+  }
+}

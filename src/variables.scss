@@ -1,6 +1,10 @@
 :root {
-  --main-text-color: #1e1e1e;
+ --main-text-color: #1e1e1e;
   --secondary-text-color: #373737;
+  --main-background-color: #f5f5f5;
+  --secondary-background-color: #ccbe9e;
+  --secondary-color: #d9d9d9;
+  --darker-background-color: rgba(175, 175, 175, 0.2);
   --main-linear-gradient: linear-gradient(
     to right,
     #cc9c48,
@@ -8,8 +12,11 @@
     #ead77c,
     #ead16d
   );
-  --main-background-color: rgb(245, 245, 245);
-  --secondary-background-color: #ccbe9e;
-  --secondary-color: #d9d9d9;
-  --darker-background-color: rgba(175, 175, 175, 0.2);
+    --main-linear-gradient-vertical: linear-gradient(
+    to top,
+    #cc9c48,
+    #dbb763,
+    #ead77c,
+    #ead16d
+  );
 }
