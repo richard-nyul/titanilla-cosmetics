@@ -1,45 +1,50 @@
 @import url('@variables');
 
 .service-detail-container {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 50px auto;
   padding: 2rem;
 
-  .tabs-nav {
+  .service-detail-subcontainer {
     display: flex;
+    align-items: flex-start;
+    gap: 50px;
+  }
+
+  .tabs-nav {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
     list-style: none;
     padding: 0;
-    margin: 0 0 1.5rem 0;
-    border-bottom: 2px solid #ccc;
     position: relative;
 
     .tab-item {
       cursor: pointer;
       padding: 0.8rem 1.2rem;
       user-select: none;
-      font-weight: 600;
-      color: #666;
-      transition: color 0.3s ease;
+      transition: opacity 0.3s ease;
+      opacity: 0.2;
 
       &:hover,
       &.active {
         color: var(--main-linear-gradient);
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
       }
 
       &:focus {
         outline: none;
-        text-decoration: underline;
       }
     }
 
     .tab-line {
       position: absolute;
-      bottom: -2px;
-      left: 0;
-      height: 3px;
-      background: var(--main-linear-gradient);
+      border-radius: 12px;
+      right: 0;
+      width: 2px;
+      background: var(--main-linear-gradient-vertical);
       transition: transform 0.3s ease;
-      width: 100%; // will be overridden inline for correct width per tab
     }
   }
 
@@ -71,8 +76,8 @@
     list-style: disc;
   }
 
-  a {
-    font-size: 1.2em;
+  .back-link {
+    margin-left: 10px;
     background: var(--main-linear-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -99,10 +104,18 @@
     }
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1500px) {
     .service-detail-content-container {
       flex-direction: column;
     }
+  }
+
+  @media (max-width: 1000px) {
+    .service-detail-subcontainer {
+      flex-direction: column;
+      align-items: center;
+    }
+
 
     img {
       margin-top: 0;
