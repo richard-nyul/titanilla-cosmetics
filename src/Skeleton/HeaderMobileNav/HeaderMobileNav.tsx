@@ -1,12 +1,14 @@
-import { useEffect, useRef, useCallback } from 'react';
+import { useEffect, useRef, useCallback, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './styles.scss';
 import { handleScroll } from '../../utils/handleScroll';
+import BookingDialog from '../../components/BookingDialog/BookingDialog';
 
 function HeaderMobileNav() {
   const sidenavRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   const closeNav = useCallback(() => {
     if (sidenavRef.current) {
@@ -60,95 +62,100 @@ function HeaderMobileNav() {
   }, [closeNav]);
 
   return (
-    <div>
-      <div id="overlay" ref={overlayRef} aria-hidden="true">
-        <nav ref={sidenavRef} className="sidenav" aria-label="Fő navigáció">
-          <button
-            type="button"
-            className="mobile-nav-button"
-            onClick={closeNav}
-            aria-label="Navigáció bezárása"
-          >
-            &times;
-          </button>
-
-          <ul className="mobile-header-nav-container">
-            <li>
-              <NavLink
-                onClick={(e) => {
-                  handleScroll(e, 'home');
-                  closeNav();
-                }}
-                className="mobile-header-nav-elem"
-                to="/"
-              >
-                Kezdőlap
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                onClick={(e) => {
-                  handleScroll(e, 'services');
-                  closeNav();
-                }}
-                className="mobile-header-nav-elem"
-                to="/services"
-              >
-                Szolgáltatások
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                onClick={(e) => {
-                  handleScroll(e, 'pricing');
-                  closeNav();
-                }}
-                className="mobile-header-nav-elem"
-                to="/pricing"
-              >
-                Árlista
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                onClick={(e) => {
-                  handleScroll(e, 'contact');
-                  closeNav();
-                }}
-                className="mobile-header-nav-elem"
-                to="/contact"
-              >
-                Kapcsolat
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                onClick={(e) => {
-                  handleScroll(e, 'booking');
-                  closeNav();
-                }}
-                className="mobile-header-nav-elem mobile-booking"
-                to="/booking"
-              >
-                Időpontfoglalás
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
+    <>
       <div>
-        <button
-          ref={buttonRef}
-          className="mobile-nav-button"
-          type="button"
-          onClick={openNav}
-          aria-label="Mobil navigáció megnyitása"
-        >
-          &#9776;
-        </button>
+        <div id="overlay" ref={overlayRef} aria-hidden="true">
+          <nav ref={sidenavRef} className="sidenav" aria-label="Fő navigáció">
+            <button
+              type="button"
+              className="mobile-nav-button"
+              onClick={closeNav}
+              aria-label="Navigáció bezárása"
+            >
+              &times;
+            </button>
+
+            <ul className="mobile-header-nav-container">
+              <li>
+                <NavLink
+                  onClick={(e) => {
+                    handleScroll(e, 'home');
+                    closeNav();
+                  }}
+                  className="mobile-header-nav-elem"
+                  to="/"
+                >
+                  Kezdőlap
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  onClick={(e) => {
+                    handleScroll(e, 'services');
+                    closeNav();
+                  }}
+                  className="mobile-header-nav-elem"
+                  to="/services"
+                >
+                  Szolgáltatások
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  onClick={(e) => {
+                    handleScroll(e, 'pricing');
+                    closeNav();
+                  }}
+                  className="mobile-header-nav-elem"
+                  to="/pricing"
+                >
+                  Árlista
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  onClick={(e) => {
+                    handleScroll(e, 'contact');
+                    closeNav();
+                  }}
+                  className="mobile-header-nav-elem"
+                  to="/contact"
+                >
+                  Kapcsolat
+                </NavLink>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    setIsBookingOpen(true);
+                    closeNav();
+                  }}
+                  className="mobile-header-nav-elem mobile-booking"
+                >
+                  Időpontfoglalás
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div>
+          <button
+            ref={buttonRef}
+            className="mobile-nav-button"
+            type="button"
+            onClick={openNav}
+            aria-label="Mobil navigáció megnyitása"
+          >
+            &#9776;
+          </button>
+        </div>
       </div>
-    </div>
+      <BookingDialog
+        isOpen={isBookingOpen}
+        onClose={() => setIsBookingOpen(false)}
+      />
+    </>
   );
 }
 

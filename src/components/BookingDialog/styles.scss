@@ -1,0 +1,187 @@
+@import url('@variables');
+
+.booking-dialog {
+  position: fixed;
+  border-color: transparent;
+  padding: 50px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: auto;
+
+  h3 {
+    margin-bottom: 40px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .notino-link {
+    color: #007bff;
+    text-decoration: underline;
+  }
+
+  .notino-link-text {
+    background: var(--main-linear-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    text-decoration: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100%;
+      background: var(--main-linear-gradient);
+    }
+  }
+
+  .qr-code {
+    width: 300px;
+    cursor: pointer;
+  }
+
+  .divider-container {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+
+    &::before,
+    &::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #ccc;
+    }
+
+    &::before {
+      margin-right: 10px;
+    }
+
+    &::after {
+      margin-left: 10px;
+    }
+
+    span {
+      color: #999;
+      font-weight: 600;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+  }
+
+  .options-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    user-select: none;
+
+    &:focus {
+      outline: 2px solid #007bff;
+      outline-offset: 2px;
+    }
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  .cancel-button {
+    margin-top: 24px;
+    background-color: #eee;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    line-height: 1;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px;
+    border-radius: 8px;
+
+    h3 {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    .qr-code {
+      width: 180px;
+    }
+
+    .divider-container {
+      margin: 20px 0;
+
+      span {
+        font-size: 12px;
+      }
+    }
+
+    .option {
+      padding: 8px;
+      gap: 6px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+
+      span {
+        font-size: 12px;
+      }
+    }
+
+    .close-button {
+      font-size: 20px;
+    }
+  }
+}
