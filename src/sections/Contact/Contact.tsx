@@ -5,6 +5,7 @@ import { mobileNumber } from '../../constants/constants';
 import location from '@assets/images/location.svg';
 import phone from '@assets/images/phone.svg';
 import email from '@assets/images/email.svg';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const buttonRef = useGlow<HTMLButtonElement>();
@@ -14,13 +15,32 @@ const Contact = () => {
     message: '',
   });
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form Submitted:', formData);
+
+    emailjs
+      .send(
+        'service_7d95auh',
+        'template_lrow8mj',
+        formData,
+        'YbPoRk3zGmx-2w9v5'
+      )
+      .then(
+        () => {
+          alert('Üzenet elküldve!');
+          setFormData({ name: '', email: '', message: '' });
+        },
+        (error) => {
+          alert('Hiba történt az üzenet küldése közben.');
+          console.error(error);
+        }
+      );
   };
 
   return (
@@ -77,20 +97,12 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
               required
-            ></textarea>
+            />
             <button ref={buttonRef} className="action" type="submit">
               Küldés
             </button>
           </form>
         </div>
-      </div>
-      <div className="iframe-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.2746424537386!2d19.230399677114672!3d47.38707400311004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741eb277ae6228d%3A0x8b281cc402beeff5!2sTitanilla%20kozmetikus!5e0!3m2!1sen!2shu!4v1740243837113!5m2!1sen!2shu"
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
       </div>
     </div>
   );
