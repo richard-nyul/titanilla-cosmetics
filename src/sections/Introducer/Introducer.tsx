@@ -1,6 +1,4 @@
 import './styles.scss';
-import portrait from '/images/portrait-300.webp';
-import portraitLow from '/images/portrait-lowres.webp';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useRef, useState, useEffect } from 'react';
 
@@ -37,6 +35,9 @@ const LazyText = ({ children, className = '' }: LazyTextProps) => {
 };
 
 const Introducer = () => {
+  const portrait = '/images/portrait-300.webp';
+  const portraitLow = '/images/portrait-lowres.webp';
+
   return (
     <div className="introducer-container">
       <div className="introducer-message">

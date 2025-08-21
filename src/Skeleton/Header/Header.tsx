@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './styles.scss';
-import logo from '@assets/images/logo.webp';
-import logoLow from '@assets/images/logo-lowres.webp';
 import HeaderNav from '../HeaderNav/HeaderNav';
 import HeaderMobileNav from '../HeaderMobileNav/HeaderMobileNav';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Header = () => {
+  const logo = '/images/logo.webp';
+  const logoLow = '/images/logo-lowres.webp';
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
