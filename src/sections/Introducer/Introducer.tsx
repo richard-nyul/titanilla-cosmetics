@@ -1,5 +1,6 @@
 import './styles.scss';
 import portrait from '@assets/images/portrait.png';
+import portraitLow from '@assets/images/portrait-lowres.webp';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Introducer = () => {
@@ -20,6 +21,7 @@ const Introducer = () => {
         className="portrait"
         alt="Pakulár Titanilla"
         src={portrait}
+        placeholderSrc={portraitLow}
         effect="blur"
         width="300px"
         style={{ objectFit: 'cover' }}
