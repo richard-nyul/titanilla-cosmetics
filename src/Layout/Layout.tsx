@@ -14,7 +14,7 @@ const Layout = () => {
       <div className="content-container">
         <Routes>
           <Route path="*" element={<HomePage />} />
-          <Route path="/services/:name" element={<ServiceDetails />} />
+          <Route path="/services/:slug" element={<ServiceDetails />} />
         </Routes>
       </div>
       <Footer />
