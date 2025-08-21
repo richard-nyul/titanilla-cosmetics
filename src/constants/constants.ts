@@ -136,7 +136,7 @@ export const priceList: PriceList = {
 export const services: Services[] = [
   {
     name: 'Carboxy terápia',
-    image: 'carboxy_therapy.png',
+    image: 'carboxy_therapy.webp',
     details:
       'A Carboxy Therapy egy innovatív, nem-invazív bőrfiatalító eljárás, amely szén-dioxid segítségével serkenti a bőr oxigénellátását és kollagéntermelését.',
     treatment:
@@ -158,7 +158,7 @@ export const services: Services[] = [
   },
   {
     name: 'Mikrotűs mezoterápia',
-    image: 'meso_booster.png',
+    image: 'meso_booster.webp',
     details:
       'A mikrotűs mezoterápia egy innovatív, frakcionált eljárás, amely hatékonyan serkenti a bőr regenerációs folyamatait, elősegíti a kollagéntermelést és fokozza a hatóanyagok felszívódását.',
     treatment:
@@ -183,7 +183,7 @@ export const services: Services[] = [
   },
   {
     name: 'Thread-Fill kollagénszál kezelés',
-    image: 'thread_fill.png',
+    image: 'thread_fill.webp',
     details:
       'A Thread-Fill kollagénszál kezelés egy fájdalommentes, nem invazív eljárás, amely serkenti a bőr saját kollagéntermelését és feszesítő hatást biztosít.',
     treatment:
@@ -205,7 +205,7 @@ export const services: Services[] = [
   },
   {
     name: 'Bioherb 50 mikrotűs peeling',
-    image: 'bioherb_50',
+    image: 'bioherb_50.webp',
     details:
       'A Bioherb 50 mikrotűs peeling egy természetes növényi összetevőkön alapuló mélyhámlasztó kezelés, amely stimulálja a bőr regenerációs folyamatait anélkül, hogy mikrosérüléseket okozna.',
     treatment:

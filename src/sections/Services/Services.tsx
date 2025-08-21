@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Services = () => {
   return (
     <div className="services-container">
-      <h1 className="title">Szolgáltatások</h1>
+      <h1 className="title">Kiemelt szolgáltatások</h1>
       {services.map((service) => (
         <div className="service-container" key={service.name}>
           <div className="information-container">
@@ -22,7 +22,7 @@ const Services = () => {
           </div>
           <img
             loading="lazy"
-            src={'/images/services/botorx.webp'}
+            src={`/images/services/${service.image}`}
             alt={service.name}
           />
         </div>

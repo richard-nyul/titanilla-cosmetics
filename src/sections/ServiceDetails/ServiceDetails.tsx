@@ -91,7 +91,7 @@ const ServiceDetails = () => {
 
           <img
             loading="lazy"
-            src={'/images/services/botorx.webp'}
+            src={`/images/services/${service.image}`}
             alt={service.name}
           />
         </div>
