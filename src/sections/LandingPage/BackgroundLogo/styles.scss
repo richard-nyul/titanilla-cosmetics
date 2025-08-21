@@ -1,7 +1,6 @@
 @import url('@variables');
 
 .background-logo-container {
-  background-image: url('@assets/images/background.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -12,6 +11,14 @@
   align-items: center;
   font-size: 1.2rem;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   .logo-container {
     display: flex;
