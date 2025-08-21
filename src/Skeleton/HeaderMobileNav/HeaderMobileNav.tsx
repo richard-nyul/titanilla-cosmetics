@@ -1,7 +1,7 @@
 import { useEffect, useRef, useCallback, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './styles.scss';
-import { handleScroll } from '../../utils/handleScroll';
+import { useHandleScroll } from '../../hooks/useHandleScroll';
 import BookingDialog from '../../components/BookingDialog/BookingDialog';
 
 function HeaderMobileNav() {
@@ -9,6 +9,7 @@ function HeaderMobileNav() {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const { handleScroll } = useHandleScroll();
 
   const closeNav = useCallback(() => {
     if (sidenavRef.current) {
@@ -97,7 +98,7 @@ function HeaderMobileNav() {
                   className="mobile-header-nav-elem"
                   to="/services"
                 >
-                  Szolgáltatások
+                  Kiemelt szolgáltatások
                 </NavLink>
               </li>
               <li>

@@ -7,6 +7,12 @@
   align-items: center;
   margin-bottom: 40px;
 
+  .title {
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;   
+  }
+
   .service-container {
     border-radius: 12px;
     display: flex;

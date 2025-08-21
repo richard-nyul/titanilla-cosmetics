@@ -1,13 +1,14 @@
 import { NavLink } from 'react-router-dom';
 import './styles.scss';
 import useGlow from '../../hooks/useGlow';
-import { handleScroll } from '../../utils/handleScroll';
+import { useHandleScroll } from '../../hooks/useHandleScroll';
 import React, { useState } from 'react';
 import BookingDialog from '../../components/BookingDialog/BookingDialog';
 
 const HeaderNav = () => {
   const bookingRef = useGlow<HTMLAnchorElement>();
   const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const { handleScroll } = useHandleScroll();
 
   return (
     <>
@@ -24,7 +25,7 @@ const HeaderNav = () => {
           to="/#services"
           onClick={(e) => handleScroll(e, 'services')}
         >
-          Szolgáltatások
+          Kiemelt szolgáltatások
         </NavLink>
         <NavLink
           className="header-nav-elem basic"
