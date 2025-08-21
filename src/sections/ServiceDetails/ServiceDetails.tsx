@@ -5,10 +5,9 @@ import { services } from '../../constants/constants';
 import { useNavigate } from 'react-router-dom';
 
 const ServiceDetails = () => {
-  const { name } = useParams<{ name: string }>();
-  const decodedName = decodeURIComponent(name || '');
-  const activeIndex = services.findIndex((s) => s.name === decodedName);
-  const service = services.find((s) => s.name === decodedName);
+  const { slug } = useParams<{ slug: string }>();
+  const activeIndex = services.findIndex((s) => s.slug === slug);
+  const service = services.find((s) => s.slug === slug);
   const navigate = useNavigate();
 
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -34,26 +33,22 @@ const ServiceDetails = () => {
         <ul className="tabs-nav" role="tablist">
           {services.map((s, i) => (
             <li
-              onClick={() =>
-                navigate(`/services/${encodeURIComponent(s.name)}`)
-              }
+              onClick={() => navigate(`/services/${s.slug}`)}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                   e.preventDefault();
-                  navigate(`/services/${encodeURIComponent(s.name)}`);
+                  navigate(`/services/${s.slug}`);
                 }
               }}
               key={s.name}
               role="tab"
-              tabIndex={s.name === name ? 0 : -1}
-              aria-selected={s.name === name}
-              className={`tab-item ${s.name === name ? 'active' : ''}`}
+              tabIndex={s.slug === slug ? 0 : -1}
+              aria-selected={s.slug === slug}
+              className={`tab-item ${s.slug === slug ? 'active' : ''}`}
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <Link to={`/services/${encodeURIComponent(s.name)}`}>
-                {s.name}
-              </Link>
+              <Link to={`/services/${s.slug}`}>{s.name}</Link>
             </li>
           ))}
           <li
