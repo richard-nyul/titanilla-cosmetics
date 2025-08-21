@@ -34,7 +34,8 @@
   background-color: var(--secondary-background-color);
 }
 
-.sidenav a, .mobile-booking {
+.sidenav a,
+.mobile-booking {
   padding: 8px;
   margin: 8px 15px;
   text-decoration: none;
@@ -63,6 +64,9 @@
 }
 
 .mobile-booking {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
   background: var(--main-linear-gradient);
   box-shadow:
     0 2px 2px rgba(0, 0, 0, 0.2),

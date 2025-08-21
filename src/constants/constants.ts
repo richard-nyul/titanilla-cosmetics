@@ -75,6 +75,18 @@ export const priceList: PriceList = {
       description:
         'Fiatal bőr számára kifejlesztett tisztító és regeneráló arckezelés.',
     },
+    {
+      title: 'Tűs mezoterápia',
+      price: 15000,
+      description:
+        'Bőrmegújítás egyik leghatékonyabb módszere, amely során apró tűszúrásokkal jutnak a hatóanyagok a bőr mélyebb rétegeibe.',
+    },
+    {
+      title: 'Argán őssejtes arckezelés',
+      price: 15000,
+      description:
+        'Argánfa őssejtei serkentik a bőr saját sejtmegújító folyamatait, javítják a bőr szerkezetét és láthatóan csökkentik a ráncok mélységét.',
+    },
   ],
   'Festések, szemöldök styling': [
     {
@@ -104,6 +116,10 @@ export const priceList: PriceList = {
     {
       title: 'Szempilla festés',
       price: 2700,
+    },
+    {
+      title: 'Szempilla lifting',
+      price: 7700,
     },
   ],
   Wax: [

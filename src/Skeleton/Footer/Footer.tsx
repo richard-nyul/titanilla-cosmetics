@@ -27,8 +27,7 @@ const Footer = () => {
         </a>
       </div>
       <p className="footer-text">
-        Minden jog fenntartva! {new Date().getFullYear()} © Titanilla
-        Kozmetikus
+        {new Date().getFullYear()} © Titanilla Kozmetikus
       </p>
     </footer>
   );
