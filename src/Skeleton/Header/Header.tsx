@@ -9,12 +9,33 @@ const Header = () => {
   const logo = '/images/logo.webp';
   const logoLow = '/images/logo-lowres.webp';
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [hideHeader, setHideHeader] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (windowWidth <= 900) {
+        if (currentScrollY > lastScrollY && currentScrollY > 91) {
+          setHideHeader(true);
+        } else {
+          setHideHeader(false);
+        }
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY, windowWidth]);
 
   if (windowWidth > 900) {
     return (
@@ -31,7 +52,7 @@ const Header = () => {
     );
   } else {
     return (
-      <header className="header">
+      <header className={`header mobile ${hideHeader ? 'hide' : ''}`}>
         <div className="logo-container">
           <NavLink className="mobile-header-nav-elem" to="/">
             <LazyLoadImage
