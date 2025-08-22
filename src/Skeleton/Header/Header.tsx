@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './styles.scss';
 import HeaderNav from '../HeaderNav/HeaderNav';
 import HeaderMobileNav from '../HeaderMobileNav/HeaderMobileNav';
@@ -11,6 +11,17 @@ const Header = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [hideHeader, setHideHeader] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleLogoClick = () => {
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+    }
+  };
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -40,10 +51,13 @@ const Header = () => {
   if (windowWidth > 900) {
     return (
       <header className="header">
-        <div className="logo-container">
-          <NavLink className="mobile-header-nav-elem" to="/">
-            <img loading="lazy" src={logo} alt="Logo" className="logo" />
-          </NavLink>
+        <div className="logo-container" onClick={handleLogoClick}>
+          <img
+            loading="lazy"
+            src={logo}
+            alt="Logo"
+            className="logo cursor-pointer"
+          />
         </div>
         <div className="navigation-container">
           <HeaderNav />
@@ -53,18 +67,16 @@ const Header = () => {
   } else {
     return (
       <header className={`header mobile ${hideHeader ? 'hide' : ''}`}>
-        <div className="logo-container">
-          <NavLink className="mobile-header-nav-elem" to="/">
-            <LazyLoadImage
-              loading="lazy"
-              src={logo}
-              alt="Logo"
-              className="logo"
-              placeholderSrc={logoLow}
-              effect="blur"
-              height="91px"
-            />
-          </NavLink>
+        <div className="logo-container" onClick={handleLogoClick}>
+          <LazyLoadImage
+            loading="lazy"
+            src={logo}
+            alt="Logo"
+            className="logo cursor-pointer"
+            placeholderSrc={logoLow}
+            effect="blur"
+            height="91px"
+          />
         </div>
         <div className="mobile-navigation-container">
           <HeaderMobileNav />
