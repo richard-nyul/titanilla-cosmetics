@@ -14,6 +14,7 @@ function HeaderMobileNav() {
   const closeNav = useCallback(() => {
     if (sidenavRef.current) {
       sidenavRef.current.classList.remove('show-sidenav');
+      document.body.style.overflow = 'auto';
     }
 
     if (overlayRef.current) {
@@ -32,6 +33,7 @@ function HeaderMobileNav() {
     setTimeout(() => {
       if (sidenavRef.current) {
         sidenavRef.current.classList.toggle('show-sidenav');
+        document.body.style.overflow = 'hidden';
       }
     }, 0);
     if (overlayRef.current) {
