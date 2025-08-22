@@ -76,7 +76,7 @@ export const priceList: PriceList = {
         'Fiatal bőr számára kifejlesztett tisztító és regeneráló arckezelés.',
     },
     {
-      title: 'Tűs mezoterápia',
+      title: 'Mikrotűs mezoterápia',
       price: 15000,
       description:
         'Bőrmegújítás egyik leghatékonyabb módszere, amely során apró tűszúrásokkal jutnak a hatóanyagok a bőr mélyebb rétegeibe.',

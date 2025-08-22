@@ -8,10 +8,10 @@ const Footer = () => {
   return (
     <footer className="footer-container">
       <div className="icon-container">
-        <a href="https://facebook.com">
+        <a href="https://www.facebook.com/share/14G3LsDKP9x/?mibextid=wwXIfr">
           <img loading="lazy" src={facebook} alt="facebook" className="icon" />
         </a>
-        <a href="https://instagram.com">
+        <a href="https://www.instagram.com/titanilla.kozmetikus?igsh=cXc3OTFxdjVhbnZl&utm_source=qr">
           <img
             loading="lazy"
             src={instagram}
@@ -19,7 +19,7 @@ const Footer = () => {
             className="icon"
           />
         </a>
-        <a href="https://tiktok.com">
+        <a href="https://www.tiktok.com/@titanilla.kozmeti?_t=ZN-8z5a1MbpDqI&_r=1">
           <img loading="lazy" src={tiktok} alt="tiktok" className="icon" />
         </a>
         <a className="phone-num" href={`tel:${+3612345678}`}>
