@@ -3,6 +3,7 @@ import facebook from '@assets/images/facebook.svg';
 import instagram from '@assets/images/instagram.svg';
 import phone from '@assets/images/phone.svg';
 import tiktok from '@assets/images/tiktok.svg';
+import { numberforCall } from '../../constants/constants';
 
 const Footer = () => {
   return (
@@ -22,7 +23,7 @@ const Footer = () => {
         <a href="https://www.tiktok.com/@titanilla.kozmeti?_t=ZN-8z5a1MbpDqI&_r=1">
           <img loading="lazy" src={tiktok} alt="tiktok" className="icon" />
         </a>
-        <a className="phone-num" href={`tel:${+3612345678}`}>
+        <a className="phone-num" href={`tel:${numberforCall}`}>
           <img loading="lazy" src={phone} alt="phone" />
         </a>
       </div>

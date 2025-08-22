@@ -251,3 +251,4 @@ export const priceListValidityMessage =
   'Az árlista 2024. 08. 01-étől érvényes.';
 export const priceListLegalNote = 'Az árváltozás jogát fenntartom.';
 export const mobileNumber = '+36 70 779 2509';
+export const numberforCall = '+36707792509';

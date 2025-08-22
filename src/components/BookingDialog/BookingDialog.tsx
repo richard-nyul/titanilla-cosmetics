@@ -4,6 +4,7 @@ import notinoQrCode from '/images/notino_qr_code.png';
 import phone from '@assets/images/phone.svg';
 import email from '@assets/images/email.svg';
 import facebook from '@assets/images/facebook.svg';
+import { numberforCall } from '../../constants/constants';
 
 interface BookingDialogProps {
   isOpen: boolean;
@@ -91,11 +92,11 @@ const BookingDialog = ({ isOpen, onClose }: BookingDialogProps) => {
           role="button"
           tabIndex={0}
           onClick={() => {
-            window.location.href = 'tel:+3612345678';
+            window.location.href = `tel:${numberforCall}`;
           }}
           onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') {
-              window.location.href = 'tel:+3612345678';
+              window.location.href = `tel:${numberforCall}`;
             }
           }}
         >
