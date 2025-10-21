@@ -22,12 +22,6 @@ type Services = {
 export const priceList: PriceList = {
   'Bielenda arckezelések': [
     {
-      title: 'Waterfalls of Gold – Kolloid Arany',
-      price: 12000,
-      description:
-        'Ránctalanító, regeneráló, hidratáló és nyugtató hatású arckezelés.',
-    },
-    {
       title: 'Feast for the Skin - Kaviár',
       price: 12000,
       description: 'Tápláló és hidratáló hatású arckezelés kaviárral.',
@@ -67,13 +61,18 @@ export const priceList: PriceList = {
       title: 'Tisztító kezelés',
       price: 10000,
       description:
-        'Mélytisztító arckezelés pattanásos, zsíros vagy problémás bőrre.',
+        'Manuális arctisztítás, amely eltávolítja a szennyeződéseket és mitesszereket, miközben felfrissíti és megújítja a bőrt.',
+    },
+    {
+      title: 'Tisztító kezelés masszázzsal és gépi hatóanyag bevitellel',
+      price: 13000,
+      description:
+        'Kézi tisztító kezelés, relaxáló masszázzsal és gépi hatóanyagbevitellel a ragyogó, egészséges arcbőrért.',
     },
     {
       title: 'Tini kezelés (18 éves kor alatt)',
       price: 8500,
-      description:
-        'Fiatal bőr számára kifejlesztett tisztító és regeneráló arckezelés.',
+      description: 'Fiatal bőr számára kifejlesztett tisztító arckezelés.',
     },
     {
       title: 'Mikrotűs mezoterápia',
@@ -96,10 +95,6 @@ export const priceList: PriceList = {
     {
       title: 'Szemöldök szedés, festés',
       price: 2700,
-    },
-    {
-      title: 'Henna szemöldök szedés, festés',
-      price: 3700,
     },
     {
       title: 'Hibrid szemöldök szedés, festés',
