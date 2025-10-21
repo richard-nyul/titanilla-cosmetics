@@ -123,12 +123,12 @@ const BookingDialog = ({ isOpen, onClose }: BookingDialogProps) => {
 
         <div
           className="option"
-          onClick={() => window.open('https://m.me/61551415283398', '_blank')}
+          onClick={() => window.open('http://m.me/titanilla.kozmetikus')}
           role="button"
           tabIndex={0}
           onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ')
-              window.open('https://m.me/61551415283398', '_blank');
+              window.open('http://m.me/titanilla.kozmetikus');
           }}
         >
           <img loading="lazy" src={facebook} alt="facebook" className="icon" />
