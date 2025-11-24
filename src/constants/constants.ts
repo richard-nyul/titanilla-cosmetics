@@ -20,17 +20,51 @@ type Services = {
 };
 
 export const priceList: PriceList = {
-  'Bielenda arckezelések': [
+  Arckezelések: [
     {
-      title: 'Feast for the Skin - Kaviár',
-      price: 12000,
-      description: 'Tápláló és hidratáló hatású arckezelés kaviárral.',
+      title: 'Tápláló, regeneráló arckezelés',
+      price: 13700,
+      description: 'Mélyen táplálja és regenerálja a bőrt.',
     },
     {
-      title: 'Aqua Porin',
+      title: 'Mélyhidratáló arckezelés',
+      price: 12000,
+      description:
+        'Feltölti a bőr nedvességtartalmát és tartós hidratálást biztosít.',
+    },
+    {
+      title: 'Mikrotűs mezoterápia',
+      price: 16700,
+      description:
+        'Bőrmegújítás egyik leghatékonyabb módszere, amely során apró tűszúrásokkal jutnak a hatóanyagok a bőr mélyebb rétegeibe.',
+    },
+    {
+      title: 'Argán őssejtes arckezelés',
+      price: 15000,
+      description:
+        'Argánfa őssejtei serkentik a bőr saját sejtmegújító folyamatait, javítják a bőr szerkezetét és láthatóan csökkentik a ráncok mélységét.',
+    },
+    {
+      title: 'Relaxáló arcmasszázs',
+      price: 6000,
+      description: 'Nyugtató és stresszoldó hatású arcmasszázs.',
+    },
+    {
+      title: 'Tisztító kezelés',
+      price: 10000,
+      description:
+        'Kézi arctisztítás, amely eltávolítja a szennyeződéseket és mitesszereket, miközben felfrissíti és megújítja a bőrt.',
+    },
+    {
+      title: 'Tisztító kezelés masszázzsal és gépi hatóanyag bevitellel',
       price: 13000,
       description:
-        'Intenzív kettős hatású mélyhidratáló hatású arckezelés dehidratált, oxigénhiányos bőrre.',
+        'Kézi tisztító kezelés, relaxáló masszázzsal és gépi hatóanyagbevitellel a ragyogó, egészséges arcbőrért.',
+    },
+    {
+      title: 'Tini kezelés (18 éves kor alatt)',
+      price: 8500,
+      description: 'Fiatal bőr számára kifejlesztett tisztító arckezelés.',
     },
   ],
   'KRX Aesthetics arckezelések': [
@@ -49,42 +83,6 @@ export const priceList: PriceList = {
       title: 'Thread-Fill kollagénszálas kezelés',
       price: 13000,
       description: 'Felszívódó kollagénszálas arckezelés a feszesebb bőrért.',
-    },
-  ],
-  'Egyéb arckezelések': [
-    {
-      title: 'Relaxáló arcmasszázs',
-      price: 6000,
-      description: 'Nyugtató és stresszoldó hatású arc- és nyakmasszázs.',
-    },
-    {
-      title: 'Tisztító kezelés',
-      price: 10000,
-      description:
-        'Manuális arctisztítás, amely eltávolítja a szennyeződéseket és mitesszereket, miközben felfrissíti és megújítja a bőrt.',
-    },
-    {
-      title: 'Tisztító kezelés masszázzsal és gépi hatóanyag bevitellel',
-      price: 13000,
-      description:
-        'Kézi tisztító kezelés, relaxáló masszázzsal és gépi hatóanyagbevitellel a ragyogó, egészséges arcbőrért.',
-    },
-    {
-      title: 'Tini kezelés (18 éves kor alatt)',
-      price: 8500,
-      description: 'Fiatal bőr számára kifejlesztett tisztító arckezelés.',
-    },
-    {
-      title: 'Mikrotűs mezoterápia',
-      price: 15000,
-      description:
-        'Bőrmegújítás egyik leghatékonyabb módszere, amely során apró tűszúrásokkal jutnak a hatóanyagok a bőr mélyebb rétegeibe.',
-    },
-    {
-      title: 'Argán őssejtes arckezelés',
-      price: 15000,
-      description:
-        'Argánfa őssejtei serkentik a bőr saját sejtmegújító folyamatait, javítják a bőr szerkezetét és láthatóan csökkentik a ráncok mélységét.',
     },
   ],
   'Festések, szemöldök styling': [
@@ -243,7 +241,7 @@ export const services: Services[] = [
 ];
 
 export const priceListValidityMessage =
-  'Az árlista 2024. 08. 01-étől érvényes.';
+  'Az árlista 2025. 11. 22-étől érvényes.';
 export const priceListLegalNote = 'Az árváltozás jogát fenntartom.';
 export const mobileNumber = '+36 70 779 2509';
 export const numberforCall = '+36707792509';
