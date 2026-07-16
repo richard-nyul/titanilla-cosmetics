@@ -8,9 +8,7 @@ import 'swiper/css/pagination';
 import { Pagination, Autoplay } from 'swiper/modules';
 
 const Reviews = () => {
-  const filteredReviews = reviews.result.reviews
-    .filter((review) => review.rating >= 4)
-    .slice(0, 4);
+  const filteredReviews = reviews.result.reviews;
 
   return (
     <section className="reviews-container">
@@ -25,7 +23,11 @@ const Reviews = () => {
         loop
         spaceBetween={16}
         slidesPerView={1}
-        pagination={{ clickable: true }}
+        pagination={{
+          clickable: true,
+          dynamicBullets: true,
+          dynamicMainBullets: 1,
+        }}
       >
         {filteredReviews.map((review, index) => (
           <SwiperSlide className="swiper-slide" key={index}>

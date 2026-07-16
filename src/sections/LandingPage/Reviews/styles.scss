@@ -46,11 +46,12 @@
   }
 
   .swiper-container {
+    .swiper-slide {
+      margin: auto;
+    }
     .swiper-pagination {
-      display: flex;
-      justify-content: center;
+      position: absolute;
       margin-top: 20px;
-      gap: 8px;
 
       .swiper-pagination-bullet {
         width: 12px;
@@ -68,10 +69,8 @@
 
         &-active {
           background: var(--main-linear-gradient);
-          transform: scale(1.2);
         }
       }
     }
   }
-
 }
