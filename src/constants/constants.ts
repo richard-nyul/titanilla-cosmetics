@@ -22,123 +22,131 @@ type Services = {
 export const priceList: PriceList = {
   Arckezelések: [
     {
-      title: 'Tápláló, regeneráló arckezelés',
-      price: 13700,
-      description: 'Mélyen táplálja és regenerálja a bőrt.',
-    },
-    {
-      title: 'Mélyhidratáló arckezelés',
-      price: 12000,
+      title: 'Aqua Balance arckezelés',
+      price: 14000,
       description:
-        'Feltölti a bőr nedvességtartalmát és tartós hidratálást biztosít.',
+        'Intenzív hidratáló kezelés, amely feltölti a bőr nedvességtartalmát és helyreállítja annak természetes egyensúlyát.',
     },
     {
-      title: 'Mikrotűs mezoterápia',
-      price: 16700,
+      title: 'Radiance arckezelés',
+      price: 15500,
       description:
-        'Bőrmegújítás egyik leghatékonyabb módszere, amely során apró tűszúrásokkal jutnak a hatóanyagok a bőr mélyebb rétegeibe.',
+        'Tápláló, regeneráló kezelés, amely javítja a bőr minőségét és fokozza annak természetes ragyogását.',
     },
-    {
-      title: 'Argán őssejtes arckezelés',
-      price: 15000,
-      description:
-        'Argánfa őssejtei serkentik a bőr saját sejtmegújító folyamatait, javítják a bőr szerkezetét és láthatóan csökkentik a ráncok mélységét.',
-    },
-    {
-      title: 'Relaxáló arcmasszázs',
-      price: 6000,
-      description: 'Nyugtató és stresszoldó hatású arcmasszázs.',
-    },
-    {
-      title: 'Tisztító kezelés',
-      price: 10000,
-      description:
-        'Kézi arctisztítás, amely eltávolítja a szennyeződéseket és mitesszereket, miközben felfrissíti és megújítja a bőrt.',
-    },
-    {
-      title: 'Tisztító kezelés masszázzsal és gépi hatóanyag bevitellel',
-      price: 13000,
-      description:
-        'Kézi tisztító kezelés, relaxáló masszázzsal és gépi hatóanyagbevitellel a ragyogó, egészséges arcbőrért.',
-    },
-    {
-      title: 'Tini kezelés (18 éves kor alatt)',
-      price: 8500,
-      description: 'Fiatal bőr számára kifejlesztett tisztító arckezelés.',
-    },
-  ],
-  'KRX Aesthetics arckezelések': [
     {
       title: 'Bioherb 50 Peeling',
-      price: 15000,
-      description: 'Természetes, savak nélküli bőrmegújító arckezelés.',
-    },
-    {
-      title: 'Carboxy Terápia',
-      price: 15000,
+      price: 18000,
       description:
-        'Non-invazív szén-dioxidos arckezelés magas hatóanyag tartalommal és extra növényi kivonatokkal.',
+        'Természetes, savak nélküli bőrmegújító arckezelés, amely az egységesebb bőrkép kialakulását segíti.',
     },
     {
       title: 'Thread-Fill kollagénszálas kezelés',
-      price: 13000,
+      price: 16000,
       description: 'Felszívódó kollagénszálas arckezelés a feszesebb bőrért.',
+    },
+    {
+      title: 'Carboxy terápia',
+      price: 17000,
+      description:
+        'Fokozza a bőr mikrokeringését és azonnali friss, ragyogó hatást biztosít.',
+    },
+    {
+      title: 'Carboxy + Thread-Fill kezelés',
+      price: 18000,
+      description:
+        'Intenzív kombinált kezelés, amely egyszerre fokozza a bőr ragyogását és feszességét.',
+    },
+    {
+      title: 'Mikrotűs mezoterápia',
+      price: 19500,
+      description:
+        'Hatékony bőrmegújító kezelés, amely serkenti a kollagéntermelést és javítja a bőr szerkezetét.',
+    },
+    {
+      title: 'Relaxáló arcmasszázs',
+      price: 7000,
+      description:
+        'Oldja a feszültséget, serkenti a keringést és friss, kipihent arcbőrt eredményez.',
+    },
+    {
+      title: 'Inflacure kezelés',
+      price: 18000,
+      description:
+        'Gyulladt, érzékeny és problémás bőrre, akár rosaceás bőrre is ajánlott nyugtató kezelés, amely segít helyreállítani a bőr egyensúlyát.',
+    },
+    {
+      title: 'Inflacure + tisztító kezelés',
+      price: 22000,
+      description:
+        'Komplex kezelés tisztítással és gyulladáscsökkentő hatóanyagokkal a tisztább és nyugodtabb bőrért.',
+    },
+    {
+      title: 'Tisztító kezelés',
+      price: 11000,
+      description:
+        'Kézi arctisztítás, amely eltávolítja a szennyeződéseket és a mitesszereket, friss és tiszta bőrképet eredményez.',
+    },
+    {
+      title: 'Nagy tisztító kezelés',
+      price: 15500,
+      description:
+        'Kézi tisztítással, relaxáló masszázzsal és gépi hatóanyagbevitellel kombinált komplex kezelés a tisztább és egészségesebb bőrért.',
     },
   ],
   'Festések, szemöldök styling': [
     {
       title: 'Szemöldök szedés csipesszel',
-      price: 1700,
+      price: 2000,
     },
     {
       title: 'Szemöldök szedés, festés',
-      price: 2700,
+      price: 3500,
     },
     {
       title: 'Hibrid szemöldök szedés, festés',
-      price: 3700,
+      price: 4000,
     },
     {
       title: 'Szemöldök laminálás',
-      price: 6700,
+      price: 8000,
     },
     {
       title: 'Szemöldök szedés, festés, laminálás',
-      price: 9700,
+      price: 11000,
     },
     {
       title: 'Szempilla festés',
-      price: 2700,
+      price: 3000,
     },
     {
       title: 'Szempilla lifting',
-      price: 7700,
+      price: 9500,
     },
   ],
   Wax: [
     {
       title: 'Bajusz',
-      price: 2000,
+      price: 2200,
     },
     {
       title: 'Hónalj',
-      price: 2500,
+      price: 3000,
     },
     {
       title: 'Kar könyékig',
-      price: 2800,
+      price: 3200,
     },
     {
       title: 'Teljes kar',
-      price: 3800,
+      price: 4500,
     },
     {
       title: 'Láb térdig',
-      price: 3700,
+      price: 4500,
     },
     {
       title: 'Teljes láb',
-      price: 5800,
+      price: 7000,
     },
   ],
 };
@@ -240,8 +248,7 @@ export const services: Services[] = [
   },
 ];
 
-export const priceListValidityMessage =
-  'Az árlista 2025. 11. 22-étől érvényes.';
+export const priceListValidityMessage = 'Az árlista 2026. 07. 15-től érvényes.';
 export const priceListLegalNote = 'Az árváltozás jogát fenntartom.';
 export const mobileNumber = '+36 70 779 2509';
 export const numberforCall = '+36707792509';
