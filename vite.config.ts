@@ -8,6 +8,7 @@ const __dirname = dirname(__filename);
 
 export default defineConfig({
   plugins: [react()],
+  base: '/titanilla-cosmetics/',
   resolve: {
     alias: {
       '@assets': resolve(__dirname, 'src/assets'),
