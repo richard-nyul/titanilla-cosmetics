@@ -35,8 +35,8 @@ const LazyText = ({ children, className = '' }: LazyTextProps) => {
 };
 
 const Introducer = () => {
-  const portrait = '/images/portrait-300.webp';
-  const portraitLow = '/images/portrait-lowres.webp';
+  const portrait = `${import.meta.env.BASE_URL}images/portrait-300.webp`;
+  const portraitLow = `${import.meta.env.BASE_URL}images/portrait-lowres.webp`;
 
   return (
     <div className="introducer-container">

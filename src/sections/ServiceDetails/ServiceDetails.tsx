@@ -86,7 +86,7 @@ const ServiceDetails = () => {
 
           <img
             loading="lazy"
-            src={`/images/services/${service.image}`}
+            src={`${import.meta.env.BASE_URL}images/services/${service.image}`}
             alt={service.name}
           />
         </div>

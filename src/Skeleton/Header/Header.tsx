@@ -6,8 +6,8 @@ import HeaderMobileNav from '../HeaderMobileNav/HeaderMobileNav';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Header = () => {
-  const logo = '/images/logo.webp';
-  const logoLow = '/images/logo-lowres.webp';
+  const logo = `${import.meta.env.BASE_URL}images/logo.webp`;
+  const logoLow = `${import.meta.env.BASE_URL}images/logo-lowres.webp`;
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [hideHeader, setHideHeader] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);

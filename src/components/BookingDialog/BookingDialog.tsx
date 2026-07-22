@@ -1,6 +1,5 @@
 import './styles.scss';
 import { useRef, useEffect } from 'react';
-import notinoQrCode from '/images/notino_qr_code.png';
 import phone from '@assets/images/phone.svg';
 import email from '@assets/images/email.svg';
 import facebook from '@assets/images/facebook.svg';
@@ -75,7 +74,7 @@ const BookingDialog = ({ isOpen, onClose }: BookingDialogProps) => {
         className="notino-link"
       >
         <img
-          src={notinoQrCode}
+          src={`${import.meta.env.BASE_URL}images/notino_qr_code.png`}
           alt="Notino QR code"
           className="qr-code"
           loading="lazy"
