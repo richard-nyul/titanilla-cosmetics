@@ -54,10 +54,10 @@ const Contact = () => {
           </a>
           <a
             className="contact-link"
-            href="mailto:info@titanillakozmetikus.com"
+            href="mailto:titanilla.kozmetikus@gmail.com"
           >
             <img loading="lazy" src={email} alt="email" className="icon" />
-            <p>info@titanillakozmetikus.com</p>
+            <p>titanilla.kozmetikus@gmail.com</p>
           </a>
           <a
             className="contact-link"

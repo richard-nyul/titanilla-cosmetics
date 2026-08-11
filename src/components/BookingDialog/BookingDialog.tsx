@@ -108,11 +108,11 @@ const BookingDialog = ({ isOpen, onClose }: BookingDialogProps) => {
           role="button"
           tabIndex={0}
           onClick={() => {
-            window.location.href = 'mailto:info@titanillakozmetikus.hu';
+            window.location.href = 'mailto:info@titanilla.kozmetikus@gmail.com';
           }}
           onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') {
-              window.location.href = 'mailto:info@titanillakozmetikus.hu';
+              window.location.href = 'mailto:titanilla.kozmetikus@gmail.com';
             }
           }}
         >
