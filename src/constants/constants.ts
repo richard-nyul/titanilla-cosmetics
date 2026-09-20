@@ -126,7 +126,7 @@ export const priceList: PriceList = {
   Wax: [
     {
       title: 'Bajusz',
-      price: 2200,
+      price: 2500,
     },
     {
       title: 'Hónalj',
@@ -134,7 +134,7 @@ export const priceList: PriceList = {
     },
     {
       title: 'Kar könyékig',
-      price: 3200,
+      price: 3500,
     },
     {
       title: 'Teljes kar',
