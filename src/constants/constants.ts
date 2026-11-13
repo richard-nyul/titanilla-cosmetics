@@ -22,6 +22,12 @@ type Services = {
 export const priceList: PriceList = {
   Arckezelések: [
     {
+      title: 'Koreai Peel & Fill arckezelés',
+      price: 20000,
+      description:
+        'Innovatív, savmentes koreai bőrmegújító kezelés, amely támogatja a bőr megújítását, regenerációját és hidratáltságát.',
+    },
+    {
       title: 'Aqua Balance arckezelés',
       price: 14000,
       description:
@@ -43,18 +49,6 @@ export const priceList: PriceList = {
       title: 'Thread-Fill kollagénszálas kezelés',
       price: 16000,
       description: 'Felszívódó kollagénszálas arckezelés a feszesebb bőrért.',
-    },
-    {
-      title: 'Carboxy terápia',
-      price: 17000,
-      description:
-        'Fokozza a bőr mikrokeringését és azonnali friss, ragyogó hatást biztosít.',
-    },
-    {
-      title: 'Carboxy + Thread-Fill kezelés',
-      price: 18000,
-      description:
-        'Intenzív kombinált kezelés, amely egyszerre fokozza a bőr ragyogását és feszességét.',
     },
     {
       title: 'Mikrotűs mezoterápia',
@@ -153,27 +147,65 @@ export const priceList: PriceList = {
 
 export const services: Services[] = [
   {
-    name: 'Carboxy terápia',
-    slug: 'carboxy-terapia',
-    image: 'carboxy_therapy.webp',
+    name: 'Koreai Peel & Fill',
+    slug: 'koreai-peel-and-fill',
+    image: 'koreai_peel_and_fill.webp',
+
     details:
-      'A Carboxy Therapy egy innovatív, nem-invazív bőrfiatalító eljárás, amely szén-dioxid segítségével serkenti a bőr oxigénellátását és kollagéntermelését.',
+      'A Peel & Fill egy innovatív, 5. generációs, exoszómás bőrmegújító kezelés, amely a kíméletes sejtmegújítást és az intenzív hidratálást ötvözi. Savmentes technológiájának köszönhetően a hagyományos hámlasztó kezelésekkel szemben a bőr természetes védőrétegének megőrzésére és regenerációjának támogatására helyezi a hangsúlyt.',
+
     treatment:
-      'A kezelés során a bőrbe juttatott CO₂ fokozza a vérkeringést, csökkenti a ráncokat, feszesíti a bőrt és javítja annak textúráját. Ideális választás fakó, fáradt bőrre, pigmentfoltok halványítására és a bőr rugalmasságának növelésére.',
+      'A kezelés során ultrahangos hatóanyagbevitellel segítjük a speciális bőrmegújító és hidratáló összetevők felszívódását, majd LED-fényterápiával támogatjuk a bőr természetes regenerációs folyamatait. A két technológia együttes alkalmazása hozzájárul a bőr hidratáltságának, textúrájának és általános megjelenésének javításához. Az eljárás kíméletes, fájdalommentes, nem jár látható hámlással vagy felépülési idővel.',
+
     pros: [
-      'Fakó, fáradt bőr élénkítése',
-      'Ráncok és finom vonalak halványítása',
-      'Pórusok összehúzása',
-      'Hidratáció fokozása',
+      'Kíméletes bőr- és sejtmegújítás',
+      'Intenzív hidratálás és bőrfeltöltés',
+      'A bőr természetes védőrétegének regenerálásának támogatása',
+      'Üdébb, ragyogóbb és frissebb bőrkép',
+      'A bőr textúrájának és megjelenésének javítása',
+      'Fájdalommentes kezelés, hámlás és felépülési idő nélkül',
+      'Nem szárítja a bőrt',
+      'Érzékeny, rosaceára hajlamos bőrön is alkalmazható',
+      'Az év bármely szakában végezhető',
     ],
     cons: [
-      'Nyílt sebek, aktív fertőzések a bőrön',
-      'Súlyos akné, rosacea akut fázisban',
-      'Terhesség és szoptatás',
-      'Friss lézeres vagy hámlasztó kezelés utáni időszak',
+      'Orvosi retinoidkezelés alatt, illetve annak befejezését követő legalább 6 hónapban',
+      'Retinoltartalmú otthoni készítmények használata a kezelés előtti és utáni 7 napban',
+      'Aktív, fellángolásban lévő autoimmun bőrbetegségek',
+      'Botoxkezelést vagy arcfeltöltést követő 4 hétben',
+      'Műtéti beavatkozás után a teljes gyógyulásig',
+      'Közepes vagy mély kémiai hámlasztást követő legalább 1 hónapban',
+      'Egyéb hámlasztó és bőrmegújító kezelések után, az előírt várakozási idő leteltéig',
     ],
     result:
-      'A Carboxy kezelés már az első alkalommal látványos eredményt hoz, de kúraszerű alkalmazása segíti a bőr tartós megújulását és egészségesebb kinézetét.',
+      'Az első változások már közvetlenül a kezelés után láthatók: a bőr frissebbnek, hidratáltabbnak és ragyogóbbnak tűnhet. A teljes eredmény várhatóan 8–10 nap alatt bontakozik ki, miközben a bőr megújulási folyamatai tovább zajlanak.',
+  },
+  {
+    name: 'KRX Inflacure',
+    slug: 'krx-inflacure',
+    image: 'krx_inflacure.webp',
+    details:
+      'A KRX Inflacure egy professzionális regeneráló kezelés, amelyet kifejezetten rosaceára hajlamos, gyulladt, irritált és sérült bőrbarrierű bőr ápolására fejlesztettek ki. Különleges hatóanyag-kombinációja, többek között karbamid, természetes klorofill, nyugtató növényi kivonatok és biomimetikus peptidek segítik a bőrpír mérséklését, az irritáció enyhítését és a bőr természetes védőrétegének helyreállítását.',
+    treatment:
+      'A kezelés során ultrahangos hatóanyagbevitellel támogatjuk a nyugtató és regeneráló összetevők felszívódását, majd LED-fényterápiával segítjük a bőr természetes regenerációs folyamatait. A komplex ápolás célja a gyulladásra és irritációra hajlamos bőr megnyugtatása, intenzív hidratálása, valamint a kellemetlen feszülő, égő érzés enyhítése.',
+    pros: [
+      'Bőrpír és irritáció mérséklésének támogatása',
+      'Nyugtató ápolás rosaceára hajlamos és pirosodó bőrre',
+      'A sérült bőrbarrier regenerációjának támogatása',
+      'Intenzív hidratálás és a bőr komfortérzetének javítása',
+      'A feszülő, égő kellemetlen érzés enyhítése',
+      'Biomimetikus peptidekkel támogatott bőrregeneráció',
+    ],
+    cons: [
+      'Aktív, fertőző bőrbetegségek és herpesz az érintett területen',
+      'Láz és akut fertőzéses megbetegedések',
+      'Pacemaker vagy egyéb beültetett elektronikus eszköz ultrahangos kezelés esetén',
+      'Terhesség esetén a gépi kezelés nem alkalmazható',
+      'Fényérzékenység vagy fényérzékenységet okozó gyógyszerek szedése',
+    ],
+
+    result:
+      'A kezelés segít megnyugtatni az irritált bőrt, mérsékelni a bőrpírt és enyhíteni a kellemetlen feszülő érzést. Intenzív hidratálást biztosít, javítja a bőr komfortérzetét, és támogatja a sérült bőrbarrier regenerációját. Rendszeres alkalmazása hozzájárul a kiegyensúlyozottabb, egészségesebb és ápoltabb bőrkép kialakulásához.',
   },
   {
     name: 'Mikrotűs mezoterápia',
@@ -248,7 +280,7 @@ export const services: Services[] = [
   },
 ];
 
-export const priceListValidityMessage = 'Az árlista 2026. 07. 15-től érvényes.';
+export const priceListValidityMessage = 'Az árlista 2026. 11. 01-től érvényes.';
 export const priceListLegalNote = 'Az árváltozás jogát fenntartom.';
 export const mobileNumber = '+36 70 779 2509';
 export const numberforCall = '+36707792509';
